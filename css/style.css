@@ -1,12 +1,12 @@
-html.dark .card{
+.card{
     background-color:rgb(42, 42, 42);
     border:none;
+    cursor:pointer;
 }
-
-html.dark .card:hover{
+.card:hover{
     transition: 0.1s;
     background-color:rgb(48, 48, 48);
-
+    cursor:pointer;
 }
 .band-container{
     background: linear-gradient(#eb191986, #00000000);
