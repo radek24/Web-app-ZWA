@@ -1,5 +1,5 @@
 <?php
-require("./head.phtml");
+require("./view/head.phtml");
 ?>
 <div class="band-container">
     <div class="container pt-5 ">
@@ -25,5 +25,5 @@ require("./head.phtml");
 </div>
 </div>
 <?php
-require("./footer.phtml");
+require("./view/footer.phtml");
 ?>

@@ -1,0 +1,54 @@
+<?php
+require("./view/head.phtml");
+?>
+<div class="band-container">
+  <div class="container pt-5 ">
+    <div class="text-center">
+      <h1 class="display-1" style="font-weight: bold; padding-top:10%"><?php echo  $row["name"] ?></h1>
+      <div class="container ">
+        <div class="row text-muted">
+          <div class="col-sm-3 ">
+          </div>
+          <div class="col-sm-3 ">
+            <h5>5 ALBUMS</h5>
+          </div>
+          <div class="col-sm-3">
+            <h5>42 SONGS</h5>
+          </div>
+          <div class="col-sm-3 ">
+          </div>
+        </div>
+      </div>
+      <p class="lead py-5 "><?php echo $row["info"] ?>
+      </p>
+    </div>
+  </div>
+
+</div>
+<div class="container pt-5 ">
+  <div class="text-center">
+  </div>
+  <?php
+  require_once("phpFunc/DB_connect.php");
+  $band = $_GET["band"];
+  $sql = 'SELECT * FROM bands INNER JOIN albums ON albums.band_id = bands.id WHERE bands.id = ' . $row["id"];
+  $result = mysqli_query($db, $sql);
+
+
+  if (mysqli_num_rows($result) > 0) {
+    while ($row_alb = mysqli_fetch_assoc($result)) {
+      require("./view/AlbumCard.phtml");
+    }
+  }
+
+
+
+
+  ?>
+</div>
+</div>
+</div>
+
+<?php
+require("./view/footer.phtml");
+?>

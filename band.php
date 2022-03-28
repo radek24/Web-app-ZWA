@@ -18,17 +18,17 @@
             $result = mysqli_stmt_get_result($stmt);
             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    require("./AlbumCard.phtml");
+                    require("./view/band.phtml");
                 }
             }
         }
     }
-    
+    /*
     $hacker = '<script>alert("hacking")</script>';
     echo $hacker;
     $hacker_denied = htmlspecialchars($hacker);
     echo $hacker_denied;
-
+    */
 
     ?>
 </body>
