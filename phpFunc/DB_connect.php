@@ -7,6 +7,4 @@ $DBname = "rater";
 $db = mysqli_connect($DBserver, $DBuser, $DBpassword, $DBname);
 mysqli_set_charset($db, "utf8");
 
-
-
 ?>
