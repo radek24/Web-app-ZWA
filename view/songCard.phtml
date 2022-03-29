@@ -1,11 +1,28 @@
-    <div class="card my-4 ">
-        <div class="card-body d-inline">
-            <h5 class=" align-middle d-inline"><?php echo $i . "."; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAVORITE WORST NIGHTMARES</h5>
-            <p class=" align-middle mx-5 text-muted d-inline">3:32</p>
-            <p class=" align-middle mx-5 text-muted d-inline">AVG Rating:&nbsp;<span class="text-success">4.75</span>/5</p>
-            <form style="display:inline;width:50px;" method="post">
-                <input id="input-1"  name=<?php echo '"rating'.$i.'"';?> class=" rating rating-loading" style="display:none !important;" data-min="0" data-max="5" data-step="1" value="0">
-            </form>
-            <button  onClick="location.href='https://open.spotify.com/track/5eyTC5GZzpzlN7YRO9AoPf?si=2c620a9351da4586'" type="button" class=" align-middle btn btn-success mr-3 d-inline float-right " style="background-color:#1DB954; border:none">Listen on Spotify!</button>
+<div class="song card my-4 ">
+    <div class="card-body">
+        <div class="row">
+            <div class="">
+                <h5>
+                    <?php echo $rowsng["order"]; ?>.
+                </h5>
+            </div>
+            <div class="col-3 text-left" >
+
+                <h5 class="d-inline"><?php echo $rowsng["name"]; ?></h5>
+                <br>
+                <p class="   text-muted"><?php echo secsToMins($rowsng["lenght"]) ?></p>
+            </div>
+            <div class="col-3">
+                <p class="   text-muted d-inline">AVG Rating:&nbsp;<span class="text-success">4.75</span>/5</p>
+            </div>
+            <div class="col-3">
+                <form style="display:inline;width:50px;" method="post">
+                    <input id="input-1" name="" class=" rating rating-loading" style="display:none !important;" data-min="0" data-max="5" data-step="1" value="0">
+                </form>
+            </div>
+            <div class="col">
+                <button onClick="location.href='<?php echo $rowsng["spotify_link"] ?>'" type="button" class="  btn btn-success  d-inline float-right " style="background-color:#1DB954; border:none">Listen on Spotify!</button>
+            </div>
         </div>
     </div>
+</div>

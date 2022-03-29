@@ -1,0 +1,36 @@
+<?php
+require("./view/head.phtml");
+require("./phpFunc/utils.php")
+
+?>
+<style>
+  .band-container{
+    background: linear-gradient(hsla(<?php echo getColorFromID($row["albid"])?>, 77%, 51%, 0.525), #00000000); 
+}
+</style>
+<div class="band-container">
+    <div class="container pt-5 ">
+
+        <h1 class="display-2" style="font-weight: bold; padding-top:10%"><?php echo $row["albname"] ?></h1>
+        <div class="text-muted">
+            <h5><?php echo $row["name"]. " • ". $row["songCnt"] ." SONGS • ". round($row["lenght"] /60)." min"?> </h5>
+        </div>
+    </div>
+
+</div>
+<div class="container pt-5 ">
+    <div class="text-center">
+
+
+    </div><?php
+ $result_alb = returnsongs($db, $row["albid"]);
+ while ($rowsng = mysqli_fetch_array($result_alb, MYSQLI_ASSOC)) {
+    require("./view/songCard.phtml");
+}
+?>
+ </div>
+</div>
+</div>
+<?php
+require("./view/footer.phtml");
+?>

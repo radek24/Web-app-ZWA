@@ -8,10 +8,11 @@
     background-color:rgb(48, 48, 48);
     cursor:pointer;
 }
-.band-container{
-    background: linear-gradient(#eb191986, #00000000);
-    
+.song.card:hover{
+    transition: 0.1s;
+    background-color:rgb(48, 48, 48);
 }
+
 /*STAR RATING*/
 
 

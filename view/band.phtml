@@ -1,6 +1,13 @@
 <?php
 require("./view/head.phtml");
+require("./phpFunc/utils.php");
+require("./phpFunc/counters.php");
 ?>
+<style>
+  .band-container{
+    background: linear-gradient(hsla(<?php echo getColorFromID($row["id"])?>, 77%, 51%, 0.525), #00000000); 
+}
+</style>
 <div class="band-container">
   <div class="container pt-5 ">
     <div class="text-center">
@@ -10,10 +17,10 @@ require("./view/head.phtml");
           <div class="col-sm-3 ">
           </div>
           <div class="col-sm-3 ">
-            <h5>5 ALBUMS</h5>
+            <h5><?php echo getAlbums($db, $row["id"])?> ALBUMS</h5>
           </div>
           <div class="col-sm-3">
-            <h5>42 SONGS</h5>
+            <h5><?php echo getSongsNum($db, $row["id"])?> SONGS</h5>
           </div>
           <div class="col-sm-3 ">
           </div>
