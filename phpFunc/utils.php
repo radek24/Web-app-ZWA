@@ -17,4 +17,14 @@ function getColorFromID($id){
 function secsToMins($t){
     return sprintf("%02d%s%02d", ($t/60)%60, ":", $t%60);
 }
+function returnCoverPath($image){
+    $path="";
+    if (empty($image)){
+        $path = "Img/Covers/DefaultCover.png";
+    }else{
+        $path = "Img/Covers/".$image;
+    }
+return $path;
+}
+
 ?>

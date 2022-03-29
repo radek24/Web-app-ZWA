@@ -2,17 +2,17 @@
     <div class="card-body">
         <div class="row">
             <div class="">
-                <h5>
+                <h6>
                     <?php echo $rowsng["order"]; ?>.
-                </h5>
+                </h6>
             </div>
-            <div class="col-3 text-left" >
+            <div class="col-5 text-left" >
 
                 <h5 class="d-inline"><?php echo $rowsng["name"]; ?></h5>
                 <br>
                 <p class="   text-muted"><?php echo secsToMins($rowsng["lenght"]) ?></p>
             </div>
-            <div class="col-3">
+            <div class="col">
                 <p class="   text-muted d-inline">AVG Rating:&nbsp;<span class="text-success">4.75</span>/5</p>
             </div>
             <div class="col-3">
@@ -21,7 +21,7 @@
                 </form>
             </div>
             <div class="col">
-                <button onClick="location.href='<?php echo $rowsng["spotify_link"] ?>'" type="button" class="  btn btn-success  d-inline float-right " style="background-color:#1DB954; border:none">Listen on Spotify!</button>
+                <button onClick="location.href='<?php echo $rowsng["spotify_link"] ?>'" type="button" class="  btn btn-success  d-inline float-right mr-3" style="background-color:#1DB954; border:none">Listen on Spotify!</button>
             </div>
         </div>
     </div>
