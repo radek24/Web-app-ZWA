@@ -27,4 +27,14 @@ function returnCoverPath($image){
 return $path;
 }
 
+function returnBandimgPath($image){
+    $path="";
+    if (empty($image)){
+        $path = "Img/Bands/DefaultBand.png";
+    }else{
+        $path = "Img/Bands/".$image;
+    }
+return $path;
+}
+
 ?>

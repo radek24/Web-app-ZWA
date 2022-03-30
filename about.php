@@ -6,7 +6,7 @@ require("./phpFunc/utils.php")
 
     <div class="container pt-5 ">
 
-        <h1 class="display-2" style="font-weight: bold; padding-top:10%">HELLO WORLD</h1>
+        <h1 class="display-2" style="font-weight: bold; padding-top:7%">ABOUT</h1>
     </div>
 
 

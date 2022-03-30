@@ -1,3 +1,4 @@
+
 .card{
     background-color:rgb(42, 42, 42);
     border:none;
@@ -13,10 +14,30 @@
     background-color:rgb(48, 48, 48);
 }
 
+
+.clickable:hover{
+	transition: 0.1s;
+    background-color:rgb(48, 48, 48);
+    cursor:pointer;
+
+}
+
+label{
+	user-select: none;
+
+}
+label:hover{
+	cursor:pointer;
+}
+input[type=checkbox]:hover{
+	cursor:pointer;
+
+}
+#filler{
+	margin-top:900px;
+}
+
 /*STAR RATING*/
-
-
-
 
 .rating-container .rating-stars {
 	position: relative;

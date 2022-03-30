@@ -1,0 +1,10 @@
+  
+  <div class="col-sm-2  my-2">
+    <div class="card clickable" onClick="location.href='<?php echo "album.php?album=".$find_var["aid"] ?>'">
+      <div class="card-body">
+      <img class=" rounded img-fluid mb-4"  src="<?php echo returnCoverPath($find_var["cover"]) ?>">  
+      <h5 class="card-title"><?php echo $find_var["snm"] ?></h5>
+      <h6 class="card-subtitle mb-1 pt-1"><span class="badge bg-dark">Song</span></h6>
+      </div>
+    </div>
+  </div>

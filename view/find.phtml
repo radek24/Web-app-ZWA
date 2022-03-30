@@ -1,0 +1,87 @@
+<?php
+require("./view/head.phtml");
+?>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+
+    function searchq(){
+        var searchTxt = $("input[name='searchterm']").val();
+        $.post("find.php",{searchval: searchTxt},function(output){
+            $("#output").html(output);
+            
+        });
+        console.log(searchTxt);
+
+    }
+</script>
+<div class="container pt-5 ">
+
+    <h1 class="display-2" style="font-weight: bold; padding-top:7%">FIND</h1>
+</div>
+
+<div class="container">
+    <form class="row gx-3 gy-2 align-items-center" method="POST">
+        <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName">Find</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Search" name="searchterm">
+        </div>
+        <div class="col-auto">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="srchbnd" name="srchbnd" Checked>
+                <label class="form-check-label" for="srchbnd">
+                    Bands
+                </label>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="srchalb" name="srchalb" Checked>
+                <label class="form-check-label" for="srchalb">
+                    Albums
+                </label>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="srchsng" name="srchsng">
+                <label class="form-check-label" for="srchsng">
+                    Songs
+                </label>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <div class="row">
+        
+        
+        <?php
+        if (isset($_POST["searchterm"])) {
+            foreach ($bands  as $find_var) {
+                require("./view/FindCards/bandCard.phtml");
+            }
+            foreach ($albums  as $find_var) {
+                require("./view/FindCards/albumCard.phtml");
+            }
+            foreach ($songs  as $find_var) {
+                require("./view/FindCards/songCard.phtml");
+            }
+            if (empty($bands) && empty($albums) && empty($songs)) {
+
+                echo "<h1 class=\"pt-5\">We didn't find anything, maybe try something else?</h1>";
+            }
+        } else {
+
+            echo "<h1 class=\"pt-5\">Type something and we will try to find it!</h1>";
+        }
+        ?>
+    </div>
+</div>
+
+<?php
+require("./view/footer.phtml");
+?>
