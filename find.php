@@ -1,4 +1,7 @@
+
+
 <?php
+$title = "Rater - Find";
 require("./view/head.phtml");
 ?>
 <script>

@@ -1,4 +1,5 @@
 <?php
+
     require_once("phpFunc/DB_connect.php");
     $band = $_GET["album"];
     $sql = 'SELECT DISTINCT albums.id as albid, albums.name as albname, COUNT(songs.id) as songCnt, bands.name,SUM(songs.lenght) as lenght,bands.id as bndid

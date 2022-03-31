@@ -12,8 +12,10 @@ import TadyNejsouAPIkeys as nic
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
 
-spotifyArtist = 'spotify:artist:77SW9BnxLY8rJ0RciFqkHh'
-infoAboutArtist= "The Neighbourhood (sometimes rendered as THE NBHD) is an American rock band formed in Newbury Park, California, in 2011."
+#neco neco
+
+spotifyArtist = 'spotify:artist:7FBcuc1gsnv6Y1nwFtNRCb'
+infoAboutArtist= "My Chemical Romance (commonly abbreviated to MCR or My Chem) is an American rock band from Newark, New Jersey."
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
@@ -60,6 +62,8 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
         file.write("('"+str(AlbumID)+"',\""+alb+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
         addSongsFromAlbum(AlbumID,album['id'],file)
 
+
+# nechapu jak tohle funguje, ale funguje tak do toho nehrabu
 def addSongsFromAlbum(albumindex,albSpotifyID,file):
     results = sp.album_tracks(album_id=albSpotifyID)
     file.write("INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES")
@@ -68,6 +72,7 @@ def addSongsFromAlbum(albumindex,albSpotifyID,file):
         if(idx!=0):
             file.write(",")
         file.write("(")
+        #tohle posefuje ne-ascii znaky (myslim, je to zkopirovane z Stackoverflow)
         nm = re.sub(r'[^\x00-\x7f]',r'', item['name'])
         file.write("NULL,\""+nm+"\",'"+str(albumindex)+"','" + str(round(item['duration_ms']/1000))+"','"+str(idx+1)+"','"+ item['external_urls']['spotify']+"')")
         #       id      name           albumid              lenght                              order           spotify link
@@ -78,14 +83,13 @@ f = open("insert.txt", "w")
 #define unique id for band
 artist = sp.artist(spotifyArtist)
 
-
+# vis jak
 random.seed(artist['id'])
 BandID = round(random.random()*1000000)
 
+# ukladani obrazku
 url = artist['images'][1]['url']
 r = requests.get(url, allow_redirects=True)
-
-
 open("Img/Bands/band"+str(BandID)+".jpg", 'wb').write(r.content)
 photoPath = "band"+str(BandID)+".jpg"
 
@@ -94,4 +98,3 @@ f.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
 f.write("('"+str(BandID)+"','"+artist['name']+"','"+ infoAboutArtist +"','"+photoPath+"');\n")
 
 addAlbumsFromBand(BandID,spotifyArtist,f)
-
