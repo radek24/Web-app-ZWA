@@ -10,6 +10,7 @@ SELECT name as bnm, id as bid, photo
 FROM bands
 where name like "%' . $_POST["searchval"] . '%"
 order by name
+LIMIT 100;
 ';
         $result_bands = mysqli_query($db, $sql_bands);
         $bands = mysqli_fetch_all($result_bands, MYSQLI_ASSOC);
@@ -22,6 +23,7 @@ order by name
   FROM albums
   where name like "%' . $_POST["searchval"] . '%"
   order by name
+  LIMIT 100;
   ';
         $result_albums = mysqli_query($db, $sql_albums);
         $albums = mysqli_fetch_all($result_albums, MYSQLI_ASSOC);
@@ -37,6 +39,8 @@ JOIN albums
 ON albums.id = songs.album_id
 where songs.name like "%' . $_POST["searchval"] . '%"
 order by songs.name
+LIMIT 100;
+
 ';
         $result_songs = mysqli_query($db, $sql_songs);
         $songs = mysqli_fetch_all($result_songs, MYSQLI_ASSOC);

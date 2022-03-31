@@ -26,5 +26,14 @@ function GetRandomSongs($db,$album_id){
     shuffle($songs);
     return $songs;
 }
+function getallsongs($db){
+    $sql = "SELECT COUNT(songs.id) FROM bands 
+    JOIN albums 
+    ON albums.band_id = bands.id 
+    JOIN songs
+    ON albums.id = songs.album_id;";
+    $result = mysqli_query($db, $sql);
+    return mysqli_fetch_assoc($result)["COUNT(songs.id)"];
+}
 
 ?>

@@ -11,8 +11,9 @@ import TadyNejsouAPIkeys as nic
 
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
-spotifyArtist = 'spotify:artist:0Raaw7kr1Vzat4ZvHzjsJR'
-infoAboutArtist= "I Dont Know How But They Found Me (stylized in all caps), often shortened to IDKHow (stylized as iDKHOW), is an American musical duo based in Salt Lake City, Utah and formed in 2016."
+
+spotifyArtist = 'spotify:artist:77SW9BnxLY8rJ0RciFqkHh'
+infoAboutArtist= "The Neighbourhood (sometimes rendered as THE NBHD) is an American rock band formed in Newbury Park, California, in 2011."
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
