@@ -10,24 +10,36 @@ import re
 
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
-spotifyArtist = 'spotify:artist:41X1TR6hrK8Q2ZCpp2EqCz'
-infoAboutArtist= "Alexander Leon Gumuchian (born June 30, 1995), better known as bbno$ (pronounced as baby no money), is a Canadian rapper, singer, and songwriter from Vancouver, British Columbia."
+spotifyArtist = 'spotify:artist:0Raaw7kr1Vzat4ZvHzjsJR'
+infoAboutArtist= "I Dont Know How But They Found Me (stylized in all caps), often shortened to IDKHow (stylized as iDKHOW), is an American musical duo based in Salt Lake City, Utah and formed in 2016."
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id ="2d54c7e543714f0fa7ec6d2d86be9499",
                     client_secret="dab2f8c8a42a45d9bea384a0cd7dfe08",
                     redirect_uri="http://google.com/",scope=scope))
 
+
 def addAlbumsFromBand(bandindex,bandSpotifyID,file):
-    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album",limit=50)
+    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album,single",limit=50)
     albums = results['items']
     
+
+    #sneaky vyhození zbytečných alb tf
     for album in albums:
-        if "Live" in album['name']:
+        if "Live" in album['name'] :
             continue
+        if "Remix" in album['name']:
+            continue
+        if "Spotify Sessions" in album['name'] :
+            continue
+
         file.write("INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`) VALUES")
+        # 2 náhodné čísla nikdy nemůžou být stejné ne?
+
         random.seed(album['id'])
-        AlbumID = round(random.random()*1000000)
+        AlbumID = round(random.random()*10000000)
+        
+        #zjist, jestli je to single
         issingle = 0
         if  album['album_type']  ==  'album':
             issingle = 0
@@ -80,3 +92,4 @@ f.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
 f.write("('"+str(BandID)+"','"+artist['name']+"','"+ infoAboutArtist +"','"+photoPath+"');\n")
 
 addAlbumsFromBand(BandID,spotifyArtist,f)
+
