@@ -1,0 +1,40 @@
+<style>
+  * {
+    font-family: "Comic Sans MS" !important;
+    
+  }
+</style>
+<h1 class="px-5" style="padding-top:7%">Admin </h1>
+<h6 class="text-muted px-5">(please do not sql inject)</h6>
+<h2 class="px-5 pt-3">Add band</h2>
+<div class="container">
+
+<form method="post" enctype="multipart/form-data" for="admin.php">
+  <div class=" px-5 form-group row">
+    <label for="bandname" class="col-sm-2 col-form-label ">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bandname" name="name" placeholder="Name here" required>
+    </div>
+  </div>
+  <div class=" px-5 form-group row">
+    <label for="bandinfo" class="col-sm-2 col-form-label ">Info</label>
+    <div class="col-sm-10">
+      <textarea rows="4" cols="50" type="textarea" class="form-control" id="bandinfo" name="info" placeholder="Info here" required></textarea>
+
+    </div>
+  </div>
+  <div class=" px-5 form-group row">
+    <label for="bandphoto" class="col-sm-2 col-form-label ">Band photo</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="bandphoto" name="photo" placeholder="Band photo">
+    </div>
+  </div>
+  <div class=" px-5 form-group row">
+    <div class="col">
+      <input type="submit" class="btn btn-primary" id="bandphoto" placeholder="Band photo" >
+    </div>
+  </div>
+</form>
+
+
+</div>

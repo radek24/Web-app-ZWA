@@ -12,7 +12,6 @@ require("./view/head.phtml");
         $.post("search.php",{searchval: searchTxt,srchbnd: bndCk,srchalb: albCk,srchsng:sngCk},function(output){
             $("#output").html(output);
         });
-        console.log(searchTxt);
     }
 </script>
 <div class="container pt-5 ">
