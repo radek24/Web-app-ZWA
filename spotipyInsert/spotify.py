@@ -5,20 +5,23 @@ import json
 from spotipy.oauth2 import SpotifyOAuth
 import requests
 import random
-import tadyneniAPIklic as nic
+import string
+import re
+
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
-spotifyArtist = 'spotify:artist:2eBmUbHKMQCAdD824cSiIL'
-infoAboutArtist= "Feed Me Jack were an Indie/Progressive Rock group from Santa Cruz, CA. The group was founded by members Sven Gamsky and Robert Ross, later introducing members Jake Thornton and Glenn Carson. "
+spotifyArtist = 'spotify:artist:41X1TR6hrK8Q2ZCpp2EqCz'
+infoAboutArtist= "Alexander Leon Gumuchian (born June 30, 1995), better known as bbno$ (pronounced as baby no money), is a Canadian rapper, singer, and songwriter from Vancouver, British Columbia."
 
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.clinetidGLOBAL,
-                    client_secret=nic.clientkeyGLOBAL,
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id ="2d54c7e543714f0fa7ec6d2d86be9499",
+                    client_secret="dab2f8c8a42a45d9bea384a0cd7dfe08",
                     redirect_uri="http://google.com/",scope=scope))
 
 def addAlbumsFromBand(bandindex,bandSpotifyID,file):
-    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album,single",limit=50)
+    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album",limit=50)
     albums = results['items']
+    
     for album in albums:
         if "Live" in album['name']:
             continue
@@ -37,18 +40,22 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
         r_a = requests.get(url_a, allow_redirects=True)
         open("Img/Covers/cover"+str(AlbumID)+".jpg", 'wb').write(r_a.content)
         CoverPath = "cover"+str(AlbumID)+".jpg"
-        file.write("('"+str(AlbumID)+"',\""+album['name']+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
+
+        alb = re.sub(r'[^\x00-\x7f]',r'', album['name'])
+
+        file.write("('"+str(AlbumID)+"',\""+alb+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
         addSongsFromAlbum(AlbumID,album['id'],file)
 
 def addSongsFromAlbum(albumindex,albSpotifyID,file):
     results = sp.album_tracks(album_id=albSpotifyID)
     file.write("INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES")
-    
+
     for idx,item in enumerate(results['items']):
         if(idx!=0):
             file.write(",")
         file.write("(")
-        file.write("NULL,\""+item['name']+"\",'"+str(albumindex)+"','" + str(round(item['duration_ms']/1000))+"','"+str(idx+1)+"','"+ item['external_urls']['spotify']+"')")
+        nm = re.sub(r'[^\x00-\x7f]',r'', item['name'])
+        file.write("NULL,\""+nm+"\",'"+str(albumindex)+"','" + str(round(item['duration_ms']/1000))+"','"+str(idx+1)+"','"+ item['external_urls']['spotify']+"')")
         #       id      name           albumid              lenght                              order           spotify link
     file.write(";\n")
 
