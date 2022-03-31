@@ -1,3 +1,4 @@
 .cache
-spotipyInsert/tadyneniAPIklic.py
-spotipyInsert/spotify.py
+
+spotipyInsert/TadyNejsouAPIkeys.py
+*.pyc

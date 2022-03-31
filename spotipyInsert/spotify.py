@@ -7,6 +7,7 @@ import requests
 import random
 import string
 import re
+import TadyNejsouAPIkeys as nic
 
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
@@ -14,8 +15,8 @@ spotifyArtist = 'spotify:artist:0Raaw7kr1Vzat4ZvHzjsJR'
 infoAboutArtist= "I Dont Know How But They Found Me (stylized in all caps), often shortened to IDKHow (stylized as iDKHOW), is an American musical duo based in Salt Lake City, Utah and formed in 2016."
 
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id ="2d54c7e543714f0fa7ec6d2d86be9499",
-                    client_secret="dab2f8c8a42a45d9bea384a0cd7dfe08",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
+                    client_secret=nic.b,
                     redirect_uri="http://google.com/",scope=scope))
 
 
