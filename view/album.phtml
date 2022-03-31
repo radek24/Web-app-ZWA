@@ -13,7 +13,7 @@ require("./phpFunc/utils.php")
 
         <h1 class="display-2" style="font-weight: bold; padding-top:10%"><?php echo $row["albname"] ?></h1>
         <div class="text-muted">
-            <h5><?php echo $row["name"]. " • ". $row["songCnt"] ." SONGS • ". round($row["lenght"] /60)." min"?> </h5>
+            <h5><a href="<?php echo "band.php?band=".$row["bndid"] ?>"><?php echo $row["name"]. "</a> • ". $row["songCnt"] ." SONGS • ". round($row["lenght"] /60)." min"?> </h5>
         </div>
     </div>
 
