@@ -15,13 +15,21 @@
                         <h5 class="card-subtitle mb-2 text-muted pt-5">
                             <?php  
                             $songs = GetRandomSongs($db,$row_alb["id"]);
+                            
                             for($i = 0; $i <= 2; $i++){
+                                if(!empty($songs[$i][0])){
+
+                                
                                 echo $songs[$i][0];
                                 if ($i <2){
                                     echo ", ";
                                 }else{
                                     echo " ...";
                                 }
+                            }
+                            else{
+                                echo " ..."; 
+                            }
                             }
                             ?>
                         </h5>
