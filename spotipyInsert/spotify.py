@@ -13,9 +13,8 @@ import TadyNejsouAPIkeys as nic
 scope = "user-library-read"
 
 #neco neco
-
-spotifyArtist = 'spotify:artist:0XNa1vTidXlvJ2gHSsRi4A'
-infoAboutArtist= "Toto pry posloucha pan Valenta"
+spotifyArtist = 'spotify:artist:3M4ThdJR28z9eSMcQHAZ5G'
+infoAboutArtist= "The Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli, bassist and backing vocalist Barry Fratelli, and drummer and backing vocalist Mince Fratelli."
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
@@ -34,7 +33,7 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
             continue
         if "Remix" in album['name']:
             continue
-        if "Spotify Sessions" in album['name'] :
+        if "Spotify Session" in album['name'] :
             continue
 
         file.write("INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`) VALUES")
