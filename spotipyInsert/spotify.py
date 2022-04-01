@@ -82,8 +82,8 @@ def addSongsFromAlbum(albumindex,albSpotifyID,file):
 
 
 
-def addBand(artist,file,info):
-    artist = sp.artist(spotifyArtist)
+def addBand(artistpar,file,info):
+    artist = sp.artist(artistpar)
     # vis jak
 
     random.seed(artist['id'])
@@ -99,18 +99,16 @@ def addBand(artist,file,info):
     file.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
     file.write("('"+str(BandID)+"','"+artist['name']+"','"+ info +"','"+photoPath+"');\n")
 
-    addAlbumsFromBand(BandID,spotifyArtist,file)
+    addAlbumsFromBand(BandID,artistpar,file)
 
 
 
 
 
 f = open("insert.txt", "w")
-spotifyArtist = 'spotify:artist:5INjqkS1o8h1imAzPqGZBb'
-infoAboutArtist= "lorem ipsum dolor sit amet"
-
-#addBand(spotifyArtist,f,infoAboutArtist)
+#x = "spotify:artist:"+"5INjqkS1o8h1imAzPqGZBb"
+#addBand(x,f,"lorem ipsum dolor sit amet")
 with open("spotipyInsert/bands.csv", 'r') as file_b:
     reader = csv.reader(file_b)
     for row in reader:
-        addBand("spotify:artist:"+row[1],f,row[2])
+        addBand("spotify:artist:"+str(row[1]),f,row[2])
