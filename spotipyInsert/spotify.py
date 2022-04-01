@@ -8,19 +8,20 @@ import random
 import string
 import re
 import TadyNejsouAPIkeys as nic
+import csv
 
 #miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
 
 #neco neco
 
-spotifyArtist = 'spotify:artist:5INjqkS1o8h1imAzPqGZBb'
-infoAboutArtist= "lorem ipsum dolor sit amet"
-
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
                     client_secret=nic.b,
                     redirect_uri="http://google.com/",scope=scope))
+
+
+
 
 
 def addAlbumsFromBand(bandindex,bandSpotifyID,file):
@@ -79,22 +80,37 @@ def addSongsFromAlbum(albumindex,albSpotifyID,file):
         #       id      name           albumid              lenght                              order           spotify link
     file.write(";\n")
 
-#create file
+
+
+def addBand(artist,file,info):
+    artist = sp.artist(spotifyArtist)
+    # vis jak
+
+    random.seed(artist['id'])
+    BandID = round(random.random()*100000000)
+
+    # ukladani obrazku
+    url = artist['images'][1]['url']
+    r = requests.get(url, allow_redirects=True)
+    open("Img/Bands/band"+str(BandID)+".jpg", 'wb').write(r.content)
+    photoPath = "band"+str(BandID)+".jpg"
+
+
+    file.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
+    file.write("('"+str(BandID)+"','"+artist['name']+"','"+ info +"','"+photoPath+"');\n")
+
+    addAlbumsFromBand(BandID,spotifyArtist,file)
+
+
+
+
+
 f = open("insert.txt", "w")
-#define unique id for band
-artist = sp.artist(spotifyArtist)
-# vis jak
-random.seed(artist['id'])
-BandID = round(random.random()*100000000)
+spotifyArtist = 'spotify:artist:5INjqkS1o8h1imAzPqGZBb'
+infoAboutArtist= "lorem ipsum dolor sit amet"
 
-# ukladani obrazku
-url = artist['images'][1]['url']
-r = requests.get(url, allow_redirects=True)
-open("Img/Bands/band"+str(BandID)+".jpg", 'wb').write(r.content)
-photoPath = "band"+str(BandID)+".jpg"
-
-
-f.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
-f.write("('"+str(BandID)+"','"+artist['name']+"','"+ infoAboutArtist +"','"+photoPath+"');\n")
-
-addAlbumsFromBand(BandID,spotifyArtist,f)
+#addBand(spotifyArtist,f,infoAboutArtist)
+with open("spotipyInsert/bands.csv", 'r') as file_b:
+    reader = csv.reader(file_b)
+    for row in reader:
+        addBand("spotify:artist:"+row[1],f,row[2])
