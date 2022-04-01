@@ -13,8 +13,9 @@ import TadyNejsouAPIkeys as nic
 scope = "user-library-read"
 
 #neco neco
-spotifyArtist = 'spotify:artist:3XHO7cRUPCLOr6jwp8vsx5'
-infoAboutArtist= "Alt-J are an English indie rock band formed in 2007 in Leeds, by Joe Newman (guitar/lead vocals), Thom Sonny Green (drums), Gus Unger-Hamilton (keyboards/vocals) and Gwilym Sainsbury (guitar/bass)."
+
+spotifyArtist = 'spotify:artist:5INjqkS1o8h1imAzPqGZBb'
+infoAboutArtist= "lorem ipsum dolor sit amet"
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
@@ -40,7 +41,7 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
         # 2 náhodné čísla nikdy nemůžou být stejné ne?
 
         random.seed(album['id'])
-        AlbumID = round(random.random()*10000000)
+        AlbumID = round(random.random()*1000000000)
         
         print(album['name'])
         #zjist, jestli je to single
@@ -84,7 +85,7 @@ f = open("insert.txt", "w")
 artist = sp.artist(spotifyArtist)
 # vis jak
 random.seed(artist['id'])
-BandID = round(random.random()*1000000)
+BandID = round(random.random()*100000000)
 
 # ukladani obrazku
 url = artist['images'][1]['url']
