@@ -1,6 +1,7 @@
 
 
 <?php
+
 $title = "Rater - Find";
 require("./view/head.phtml");
 ?>
@@ -17,6 +18,18 @@ require("./view/head.phtml");
         });
     }
 </script>
+<style>
+.tritecky {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.specialp{
+    font-size: 0.8rem;
+
+}
+
+</style>
 <div class="container pt-5 ">
 
     <h1 class="display-2" style="font-weight: bold; padding-top:7%">FIND</h1>
@@ -55,7 +68,12 @@ require("./view/head.phtml");
     </form>
 
     <div class="row" id="output">
-        
+   <?php
+    if (!isset($_POST["searchval"])) {
+      echo "<h1 class=\"pt-5\">Type something and we will try to find it!</h1>";
+    }
+
+    ?>
     </div>
 </div>
 <div id="filler"></div>

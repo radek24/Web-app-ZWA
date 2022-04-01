@@ -19,10 +19,12 @@ LIMIT 100;
     }
     if (!empty($_POST["srchalb"])) {
         $sql_albums = '
-  SELECT name as anm, id as aid,cover
-  FROM albums
-  where name like "%' . $_POST["searchval"] . '%"
-  order by name
+  SELECT albums.name as anm, albums.id as aid,cover,bands.name as bandname
+  FROM albums 
+  JOIN bands
+  on bands.id = albums.band_id
+  where albums.name like "%' . $_POST["searchval"] . '%"
+  order by albums.name
   LIMIT 100;
   ';
         $result_albums = mysqli_query($db, $sql_albums);
@@ -33,7 +35,7 @@ LIMIT 100;
 
     if (!empty($_POST["srchsng"])) {
         $sql_songs = '
-SELECT songs.name as snm, albums.id as aid, albums.cover as cover
+SELECT songs.name as snm, albums.id as aid, albums.cover as cover, albums.name as albname
 FROM songs
 JOIN albums
 ON albums.id = songs.album_id
@@ -65,7 +67,5 @@ if (isset($_POST["searchval"])) {
         echo "<h1 class=\"pt-5\">We didn't find anything, maybe try something else?</h1>";
     }
 } else {
-
-    echo "<h1 class=\"pt-5\">Type something and we will try to find it!</h1>";
 }
 //require("./view/find.phtml");

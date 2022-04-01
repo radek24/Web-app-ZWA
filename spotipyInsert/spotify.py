@@ -14,8 +14,8 @@ scope = "user-library-read"
 
 #neco neco
 
-spotifyArtist = 'spotify:artist:7FBcuc1gsnv6Y1nwFtNRCb'
-infoAboutArtist= "My Chemical Romance (commonly abbreviated to MCR or My Chem) is an American rock band from Newark, New Jersey."
+spotifyArtist = 'spotify:artist:0XNa1vTidXlvJ2gHSsRi4A'
+infoAboutArtist= "Toto pry posloucha pan Valenta"
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
@@ -82,7 +82,6 @@ def addSongsFromAlbum(albumindex,albSpotifyID,file):
 f = open("insert.txt", "w")
 #define unique id for band
 artist = sp.artist(spotifyArtist)
-
 # vis jak
 random.seed(artist['id'])
 BandID = round(random.random()*1000000)
