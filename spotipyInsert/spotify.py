@@ -13,8 +13,8 @@ import TadyNejsouAPIkeys as nic
 scope = "user-library-read"
 
 #neco neco
-spotifyArtist = 'spotify:artist:3M4ThdJR28z9eSMcQHAZ5G'
-infoAboutArtist= "The Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli, bassist and backing vocalist Barry Fratelli, and drummer and backing vocalist Mince Fratelli."
+spotifyArtist = 'spotify:artist:3XHO7cRUPCLOr6jwp8vsx5'
+infoAboutArtist= "Alt-J are an English indie rock band formed in 2007 in Leeds, by Joe Newman (guitar/lead vocals), Thom Sonny Green (drums), Gus Unger-Hamilton (keyboards/vocals) and Gwilym Sainsbury (guitar/bass)."
 
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
@@ -42,6 +42,7 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
         random.seed(album['id'])
         AlbumID = round(random.random()*10000000)
         
+        print(album['name'])
         #zjist, jestli je to single
         issingle = 0
         if  album['album_type']  ==  'album':
