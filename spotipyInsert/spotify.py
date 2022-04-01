@@ -23,6 +23,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
 
 
 
+xy = "x"
 
 def addAlbumsFromBand(bandindex,bandSpotifyID,file):
     results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album,single",limit=50)
@@ -31,20 +32,24 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
 
     #sneaky vyhození zbytečných alb tf
     for album in albums:
+        global xy
         if "Live" in album['name'] :
             continue
         if "Remix" in album['name']:
             continue
         if "Spotify Session" in album['name'] :
             continue
+        if xy == album['name']:
+            continue
 
+        xy = album['name']
         file.write("INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`) VALUES")
         # 2 náhodné čísla nikdy nemůžou být stejné ne?
 
         random.seed(album['id'])
         AlbumID = round(random.random()*1000000000)
         
-        print(album['name'])
+        print("        "+album['name'])
         #zjist, jestli je to single
         issingle = 0
         if  album['album_type']  ==  'album':
@@ -61,14 +66,14 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
 
         alb = re.sub(r'[^\x00-\x7f]',r'', album['name'])
 
-        file.write("('"+str(AlbumID)+"',\""+alb+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
+        file.write("('"+str(AlbumID)+"',\""+alb.replace("\"","")+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
         addSongsFromAlbum(AlbumID,album['id'],file)
 
 
 # nechapu jak tohle funguje, ale funguje tak do toho nehrabu
 def addSongsFromAlbum(albumindex,albSpotifyID,file):
     results = sp.album_tracks(album_id=albSpotifyID)
-    file.write("INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES")
+    file.write("            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES")
 
     for idx,item in enumerate(results['items']):
         if(idx!=0):
@@ -76,7 +81,7 @@ def addSongsFromAlbum(albumindex,albSpotifyID,file):
         file.write("(")
         #tohle posefuje ne-ascii znaky (myslim, je to zkopirovane z Stackoverflow)
         nm = re.sub(r'[^\x00-\x7f]',r'', item['name'])
-        file.write("NULL,\""+nm+"\",'"+str(albumindex)+"','" + str(round(item['duration_ms']/1000))+"','"+str(idx+1)+"','"+ item['external_urls']['spotify']+"')")
+        file.write("NULL,\""+nm.replace("\"","")+"\",'"+str(albumindex)+"','" + str(round(item['duration_ms']/1000))+"','"+str(idx+1)+"','"+ item['external_urls']['spotify']+"')\n")
         #       id      name           albumid              lenght                              order           spotify link
     file.write(";\n")
 
@@ -95,7 +100,7 @@ def addBand(artistpar,file,info):
     open("Img/Bands/band"+str(BandID)+".jpg", 'wb').write(r.content)
     photoPath = "band"+str(BandID)+".jpg"
 
-
+    print("adding: "+artist['name'])
     file.write("INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES")
     file.write("('"+str(BandID)+"','"+artist['name']+"','"+ info +"','"+photoPath+"');\n")
 
