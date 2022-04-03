@@ -4,7 +4,7 @@
       <img  class=" rounded img-fluid mb-4"  src="<?php echo returnCoverPath($find_var["cover"]) ?>">  
       <h5 class="card-title tritecky" ><?php echo $find_var["anm"] ?></h5>
       <p class="card-subtitle mb-1 pt-1 text-muted tritecky specialp">By <?php echo $find_var["bandname"]; ?></p>
-      <h6 class="card-subtitle mb-1 pt-1"><span class="badge bg-dark">Album</span></h6>
+      <h6 class="card-subtitle mb-1 pt-1"><span class="badge bg-dark"><?php echo $find_var["sngl"]==0? "Album":"Single";?></span></h6>
       </div>
     </div>
   </div>

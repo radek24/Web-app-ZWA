@@ -10,19 +10,13 @@ import re
 import TadyNejsouAPIkeys as nic
 import csv
 
-#miluji globální proměné, a veřejné API klíče
 scope = "user-library-read"
-
-#neco neco
-
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
                     client_secret=nic.b,
                     redirect_uri="http://google.com/",scope=scope))
 
-
-
-
+#netusim jak funguji globalni promene v pythonu
 xy = "x"
 
 def addAlbumsFromBand(bandindex,bandSpotifyID,file):
@@ -43,9 +37,9 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
             continue
 
         xy = album['name']
-        file.write("INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`) VALUES")
+        file.write("INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES")
+        
         # 2 náhodné čísla nikdy nemůžou být stejné ne?
-
         random.seed(album['id'])
         AlbumID = round(random.random()*1000000000)
         
@@ -57,7 +51,7 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
         elif album['album_type'] ==  'single':
             issingle = 1
         
-
+        yearofrelease= album['release_date'][0:4]
         url_a = album['images'][1]['url']
 
         r_a = requests.get(url_a, allow_redirects=True)
@@ -66,7 +60,7 @@ def addAlbumsFromBand(bandindex,bandSpotifyID,file):
 
         alb = re.sub(r'[^\x00-\x7f]',r'', album['name'])
 
-        file.write("('"+str(AlbumID)+"',\""+alb.replace("\"","")+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"');\n")
+        file.write("('"+str(AlbumID)+"',\""+alb.replace("\"","")+"\",'"+str(bandindex)+"','"+CoverPath+"','"+str(issingle) +"','"+yearofrelease+"');\n")
         addSongsFromAlbum(AlbumID,album['id'],file)
 
 
@@ -111,8 +105,6 @@ def addBand(artistpar,file,info):
 
 
 f = open("insert.txt", "w")
-#x = "spotify:artist:"+"5INjqkS1o8h1imAzPqGZBb"
-#addBand(x,f,"lorem ipsum dolor sit amet")
 with open("spotipyInsert/bands.csv", 'r') as file_b:
     reader = csv.reader(file_b)
     for row in reader:

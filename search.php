@@ -19,7 +19,7 @@ LIMIT 100;
     }
     if (!empty($_POST["srchalb"])) {
         $sql_albums = '
-  SELECT albums.name as anm, albums.id as aid,cover,bands.name as bandname
+  SELECT albums.name as anm, albums.id as aid,cover,bands.name as bandname,albums.single as sngl
   FROM albums 
   JOIN bands
   on bands.id = albums.band_id

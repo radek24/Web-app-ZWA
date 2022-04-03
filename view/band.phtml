@@ -9,6 +9,11 @@ require("./phpFunc/counters.php");
   .band-container {
     background: linear-gradient(hsla(<?php echo getColorFromID($row["id"]) ?>, 77%, 51%, 0.525), #00000000);
   }
+  .tritecky {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 </style>
 <div class="band-container">
   <div class="container pt-5 ">
@@ -40,7 +45,7 @@ require("./phpFunc/counters.php");
   <?php
   require_once("phpFunc/DB_connect.php");
   $band = $_GET["band"];
-  $sql = 'SELECT * FROM bands INNER JOIN albums ON albums.band_id = bands.id WHERE bands.id = ' . $row["id"];
+  $sql = 'SELECT * FROM bands INNER JOIN albums ON albums.band_id = bands.id WHERE bands.id = ' . $row["id"].' ORDER BY albums.releaseyear DESC';
   $result = mysqli_query($db, $sql);
 
 
