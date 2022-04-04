@@ -15,26 +15,14 @@
                     <h5 class="card-subtitle mb-2 text-muted pt-4 tritecky">
                         <?php
                         $songs = GetRandomSongs($db, $row_alb["id"]);
-
-                        for ($i = 0; $i <= 2; $i++) {
-                            if (!empty($songs[$i][0])) {
-                                echo $songs[$i][0];
-                                if ($i < 2) {
-                                    echo ", ";
-                                }
-                            }
-                        }
+                        echo implode(", ",$songs); 
                         ?>
                     </h5>
                 </div>
                 <div class="col-md-4">
-                    <h4 class="pt-5">Average rating</h4>
+                    <h4 class="text-muted pt-5">Average rating</h4>
 
-                    <img src="Img/star.svg">
-                    <img src="Img/star.svg">
-                    <img src="Img/star.svg">
-                    <img src="Img/star.svg">
-                    <img src="Img/star.svg">
+                    <h2><img class="img-fluid"  width="7%" height="7%" src="Img/star.svg"> 4.25</h2>
 
                 </div>
             </div>

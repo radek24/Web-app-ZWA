@@ -15,16 +15,17 @@ function getSongsNum($db,$id){
     return mysqli_fetch_assoc($result)["COUNT(songs.id)"];
 }
 function GetRandomSongs($db,$album_id){
-    $sql ="SELECT songs.name
+    $sql ="SELECT songs.name as nm
     FROM songs
     JOIN albums
     ON albums.id = songs.album_id
     WHERE albums.id = $album_id
     ";
     $result = mysqli_query($db, $sql);
-    $songs =mysqli_fetch_all($result,MYSQLI_NUM);
+    $tmp =mysqli_fetch_all($result,MYSQLI_ASSOC);
+    $songs = array_column($tmp, 'nm');
     shuffle($songs);
-    return $songs;
+    return array_slice($songs,0,3);
 }
 function getallsongs($db){
     $sql = "SELECT COUNT(songs.id) FROM bands 

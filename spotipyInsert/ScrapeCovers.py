@@ -19,7 +19,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id =nic.a,
 #netusim jak funguji globalni promene v pythonu
 xy = "x"
 def addAlbumsFromBand(bandSpotifyID):
-    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album,single",limit=50)
+    results = sp.artist_albums(bandSpotifyID,country="CZ",album_type="album",limit=50)
     albums = results['items']
 
     #sneaky vyhození zbytečných alb tf
@@ -39,7 +39,8 @@ def addAlbumsFromBand(bandSpotifyID):
         url_a = album['images'][0]['url']
 
         r_a = requests.get(url_a, allow_redirects=True)
-        open("Covers_poster/cover_"+str(album['name'])+".jpg", 'wb').write(r_a.content)
+        alb = re.sub(r'[^\x00-\x7f]',r'', album['name'])
+        open("Covers_poster/cover_"+str(alb).replace("?","").replace("/","").replace("\\","")+".jpg", 'wb').write(r_a.content)
 
 f = open("insert.txt", "w")
 with open("spotipyInsert/bands.csv", 'r') as file_b:
