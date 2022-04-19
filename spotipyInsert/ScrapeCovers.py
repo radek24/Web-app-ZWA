@@ -4,8 +4,6 @@ import spotipy
 import json
 from spotipy.oauth2 import SpotifyOAuth
 import requests
-import random
-import string
 import re
 import TadyNejsouAPIkeys as nic
 import csv
@@ -40,10 +38,7 @@ def addAlbumsFromBand(bandSpotifyID):
 
         r_a = requests.get(url_a, allow_redirects=True)
         alb = re.sub(r'[^\x00-\x7f]',r'', album['name'])
-        open("Covers_poster/cover_"+str(alb).replace("?","").replace("/","").replace("\\","")+".jpg", 'wb').write(r_a.content)
+        open("Covers_poster/cover_"+str(alb).replace("?","").replace("/","").replace("\\","").replace(":","")+".jpg", 'wb').write(r_a.content)
 
-f = open("insert.txt", "w")
-with open("spotipyInsert/bands.csv", 'r') as file_b:
-    reader = csv.reader(file_b)
-    for row in reader:
-        addAlbumsFromBand("spotify:artist:"+str(row[1]))
+
+addAlbumsFromBand("spotify:artist:"+"2S5hlvw4CMtMGswFtfdK15")

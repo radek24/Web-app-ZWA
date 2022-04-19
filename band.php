@@ -14,12 +14,5 @@
             }
         }
     }
-    
-    /*
-    $hacker = '<script>alert("hacking")</script>';
-    echo $hacker;
-    $hacker_denied = htmlspecialchars($hacker);
-    echo $hacker_denied;
-    */
 
     ?>
