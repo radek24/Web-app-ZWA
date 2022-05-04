@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("./phpFunc/utils.php");
 require_once("phpFunc/DB_connect.php");
 $output = "";

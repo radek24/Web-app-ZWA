@@ -1,4 +1,5 @@
     <?php
+    session_start();
     require_once("phpFunc/DB_connect.php");
     $band = $_GET["band"];
     $sql = 'SELECT * FROM bands WHERE id = ?';

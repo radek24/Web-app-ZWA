@@ -1,199 +1,200 @@
-
-.card{
-    background-color:rgb(39, 39, 39);
-    border:none;
-
+.card {
+    background-color: rgb(39, 39, 39);
+    border: none;
 }
-.album.card:hover{
+
+.album.card:hover {
     transition: 0.1s;
-    background-color:rgb(48, 48, 48);
-    cursor:pointer;
+    background-color: rgb(48, 48, 48);
+    cursor: pointer;
 }
-.song.card:hover{
+
+.song.card:hover {
     transition: 0.1s;
-    background-color:rgb(48, 48, 48);
+    background-color: rgb(48, 48, 48);
 }
 
-
-.clickable:hover{
-	transition: 0.1s;
-    background-color:rgb(48, 48, 48);
-    cursor:pointer;
-
+.clickable:hover {
+    transition: 0.1s;
+    background-color: rgb(48, 48, 48);
+    cursor: pointer;
 }
 
-label{
-	user-select: none;
+label {
+    user-select: none;
+}
 
+label:hover {
+    cursor: pointer;
 }
-label:hover{
-	cursor:pointer;
-}
-input[type=checkbox]:hover{
-	cursor:pointer;
 
+input[type=checkbox]:hover {
+    cursor: pointer;
 }
-#filler{
-	margin-top:900px;
+
+#filler {
+    margin-top: 900px;
 }
+
 
 /*STAR RATING*/
 
 .rating-container .rating-stars {
-	position: relative;
-	cursor: pointer;
-	vertical-align: middle;
-	display: inline-block;
-	overflow: hidden;
-	white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .rating-container .rating-input {
-	position: absolute;
-	cursor: pointer;
-	width: 100%;
-	height: 1px;
-	bottom: 0;
-	left: 0;
-	font-size: 1px;
-	border: none;
-	background: 0 0;
-	padding: 0;
-	margin: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    font-size: 1px;
+    border: none;
+    background: 0 0;
+    padding: 0;
+    margin: 0;
 }
 
-.rating-disabled .rating-input, .rating-disabled .rating-stars {
-	cursor: not-allowed;
+.rating-disabled .rating-input,
+.rating-disabled .rating-stars {
+    cursor: not-allowed;
 }
 
 .rating-container .star {
-	display: inline-block;
-	margin: 0 3px;
-	text-align: center;
+    display: inline-block;
+    margin: 0 3px;
+    text-align: center;
 }
 
 .rating-container .empty-stars {
-	color: #aaa;
+    color: #aaa;
 }
 
 .rating-container .filled-stars {
-	position: absolute;
-	left: 0;
-	top: 0;
-	margin: auto;
-	color: #fde16d;
-	white-space: nowrap;
-	overflow: hidden;
-	-webkit-text-stroke: 1px #777;
-	text-shadow: 1px 1px #999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: auto;
+    color: #fde16d;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-text-stroke: 1px #777;
+    text-shadow: 1px 1px #999;
 }
 
 .rating-rtl {
-	float: right;
+    float: right;
 }
 
 .rating-animate .filled-stars {
-	transition: width .25s ease;
-	-o-transition: width .25s ease;
-	-moz-transition: width .25s ease;
-	-webkit-transition: width .25s ease;
+    transition: width .25s ease;
+    -o-transition: width .25s ease;
+    -moz-transition: width .25s ease;
+    -webkit-transition: width .25s ease;
 }
 
 .rating-rtl .filled-stars {
-	left: auto;
-	right: 0;
-	-moz-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
-	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
-	-o-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
-	transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
+    left: auto;
+    right: 0;
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0) translate3d(0, 0, 0);
 }
 
 .rating-rtl.is-star .filled-stars {
-	right: .06em;
+    right: .06em;
 }
 
 .rating-rtl.is-heart .empty-stars {
-	margin-right: .07em;
+    margin-right: .07em;
 }
 
 .rating-lg {
-	font-size: 3.91em;
+    font-size: 3.91em;
 }
 
 .rating-md {
-	font-size: 3.13em;
+    font-size: 3.13em;
 }
 
 .rating-sm {
-	font-size: 2.5em;
+    font-size: 2.5em;
 }
 
 .rating-xs {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 .rating-xl {
-	font-size: 4.89em;
+    font-size: 4.89em;
 }
 
 .rating-container .clear-rating {
-	color: #aaa;
-	cursor: not-allowed;
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 60%;
-	padding-right: 5px;
+    color: #aaa;
+    cursor: not-allowed;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60%;
+    padding-right: 5px;
 }
 
 .clear-rating-active {
-	cursor: pointer !important;
+    cursor: pointer !important;
 }
 
 .clear-rating-active:hover {
-	color: #843534;
+    color: #843534;
 }
 
 .rating-container .caption {
-	color: #999;
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 60%;
-	margin-top: -.6em;
-	margin-left: 5px;
-	margin-right: 0;
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60%;
+    margin-top: -.6em;
+    margin-left: 5px;
+    margin-right: 0;
 }
 
 .rating-rtl .caption {
-	margin-right: 5px;
-	margin-left: 0;
+    margin-right: 5px;
+    margin-left: 0;
 }
 
 @media print {
-	.rating-container .clear-rating {
-		display: none;
-	}
+    .rating-container .clear-rating {
+        display: none;
+    }
 }
 
 .empty-star {
-	color: #dee2e6;
+    color: #dee2e6;
 }
 
 .rating-container .filled-stars {
-	-webkit-text-stroke: 0;
-	text-shadow: none;
-	color: #ffca00;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    color: #ffca00;
 }
 
 .progress {
-	margin-top: 1rem;
-	border-radius: 0;
+    margin-top: 1rem;
+    border-radius: 0;
 }
 
 .progress-bar {
-	background-color: #ffca00;
-
+    background-color: #ffca00;
 }
-.rating-container.rating-s.rating-animate{
-display: inline!important;
-margin-left: 100px;
+
+.rating-container.rating-s.rating-animate {
+    display: inline!important;
+    margin-left: 100px;
 }

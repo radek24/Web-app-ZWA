@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("./view/head.phtml");
 require("./phpFunc/utils.php")
 

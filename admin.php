@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("./phpFunc/admin_upload.php");
 require("./phpFunc/DB_connect.php");
 if (isset($_FILES["photo"])) {
