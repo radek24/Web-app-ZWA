@@ -109,5 +109,43 @@ $sql = "
    $result =  mysqli_query($db,$sql);
     return mysqli_fetch_row( $result);
 }
+function returnMostRatedAlbums($db){
+$sql ='
+SELECT albums.name as albnm, count(ratings.rating) as rcount, albums.cover as albcvr, albums.single as singl,albums.band_id as bndid,albums.id as albid,albums.releaseyear as rls, bands.name as bndname
+FROM albums
+JOIN songs
+ON songs.album_id = albums.id
+JOIN ratings
+ON songs.id = ratings.songid
+JOIN bands
+ON bands.id = albums.band_id 
+GROUP BY albnm
+ORDER BY COUNT(ratings.rating) DESC
 
+';
+return  mysqli_query($db,$sql);
+
+}
+function addComment($db, $commentdata,$albumid){
+    $hacker =  htmlspecialchars($commentdata["comment"], ENT_QUOTES, 'UTF-8');
+    $sql = "
+        INSERT INTO comments (albumid,userid,albumcomment)
+        VALUES ('$albumid', '{$commentdata["userid"]}','$hacker')
+
+    ";
+    mysqli_query($db,$sql);
+    header("Location: album.php?album=".$albumid);
+    exit;
+}
+
+function getComments($db,$albumID){
+    $sql = "
+    SELECT comments.albumcomment as comment, users.name as usrnm,comments.createdT as time
+    FROM comments
+    JOIN users
+    ON users.id = comments.userid
+    WHERE albumid = $albumID
+    ";
+    return mysqli_query($db,$sql);
+}
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = "Rater - " . $row["albname"];
 require("./view/head.phtml");
-require("./phpFunc/utils.php");
+
 
 ?>
 <style>
@@ -18,7 +18,7 @@ require("./phpFunc/utils.php");
         $("input[name='rating']").each(function() {
             tmp.push($(this).val());
         });
-        rating_js = tmp[parseInt(order)-1]
+        rating_js = tmp[parseInt(order) - 1]
 
         var user = $("input[name='userID']").val();
         var song = id_sng;
@@ -45,20 +45,32 @@ require("./phpFunc/utils.php");
 
 </div>
 <div class="container pt-5 ">
-    <div class="text-center">
+    <?php
+    $result_alb = returnsongs($db, $row["albid"]);
+    while ($rowsng = mysqli_fetch_array($result_alb, MYSQLI_ASSOC)) {
+        if (isset($_SESSION["user"])) {
+            $ratinginfo  = tryFindRatingFromUser($db, $_SESSION["user"]["id"], $rowsng["id"]);
+        }
+
+        //var_dump($ratinginfo);
+        require("./view/songCard.phtml");
+    }
+    ?>
+
+    <hr />
+    <h2 class="display-2 pb-2" style="font-weight: bold;">Comments</h2>
+    <?php
+    if(isset($_SESSION["user"])){
+        require("./view/commentform.phtml");
+    }
+    $comenty = getComments($db,$row["albid"]);
+    foreach ($comenty as $comentar) {
+        require("./view/comment.phtml");
+    }
 
 
-    </div><?php
-            $result_alb = returnsongs($db, $row["albid"]);
-            while ($rowsng = mysqli_fetch_array($result_alb, MYSQLI_ASSOC)) {
-               if(isset($_SESSION["user"])){
-                $ratinginfo  = tryFindRatingFromUser($db, $_SESSION["user"]["id"],$rowsng["id"]);
-               }
-                
-                //var_dump($ratinginfo);
-                require("./view/songCard.phtml");
-            }
-            ?>
+    ?>
+      
 </div>
 </div>
 </div>

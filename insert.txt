@@ -1,4 +1,17 @@
 INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('81475162','Rammstein','Rammstein is metal band from germany.','band81475162.jpg');
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('55457465',"Zeit",'81475162','cover55457465.jpg','0','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Armee der Tristen",'55457465','206','1','https://open.spotify.com/track/514GW1c9Jn21KgZmO6mZIE')
+,(NULL,"Zeit",'55457465','322','2','https://open.spotify.com/track/2KsHzM4L7ThhNJB6MHXkPx')
+,(NULL,"Schwarz",'55457465','258','3','https://open.spotify.com/track/2UK4qw712yzFh8vYYJGv2B')
+,(NULL,"Giftig",'55457465','188','4','https://open.spotify.com/track/3Ye7vnZdrO2Gq5IyyH3cOp')
+,(NULL,"Zick Zack",'55457465','244','5','https://open.spotify.com/track/2w7Ca8DNYXBCgA6Bht7o0N')
+,(NULL,"OK",'55457465','244','6','https://open.spotify.com/track/1l0arEkM2grgUYMim5SggS')
+,(NULL,"Meine Trnen",'55457465','237','7','https://open.spotify.com/track/0qGZkkxnyfGrUBLflKwBQG')
+,(NULL,"Angst",'55457465','225','8','https://open.spotify.com/track/0UuNO0yYvsMPlyLF7RfQlg')
+,(NULL,"Dicke Titten",'55457465','219','9','https://open.spotify.com/track/5KTBaWu8IOczQ0sPWzZ7MY')
+,(NULL,"Lgen",'55457465','230','10','https://open.spotify.com/track/1LvyuaK3gMkd4MLxSEf9MO')
+,(NULL,"Adieu",'55457465','278','11','https://open.spotify.com/track/56SLMIzWKrEOWIQ5LCzKXV')
+;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('283741267',"Rammstein",'81475162','cover283741267.jpg','0','2019');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Deutschland",'283741267','322','1','https://open.spotify.com/track/2bPGTMB5sFfFYQ2YvSmup0')
 ,(NULL,"Radio",'283741267','277','2','https://open.spotify.com/track/5vZ4IeUenK2cHub2d7yfWk')
@@ -623,6 +636,9 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Haunted Lust",'153570234','157','9','https://open.spotify.com/track/7dYozCgKySaFfFSl05kfHO')
 ,(NULL,"Relimerence",'153570234','269','10','https://open.spotify.com/track/5G8mKWZd8i9P7QuW3XJnsn')
 ,(NULL,"Little Words",'153570234','242','11','https://open.spotify.com/track/6kax8MTAFhtRy8zNuAIIMG')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('682640267',"Dance Alone",'70103635','cover682640267.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Dance Alone",'682640267','196','1','https://open.spotify.com/track/6InXacCXaiLimRPI46zp0h')
 ;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('661717910',"Changes",'70103635','cover661717910.jpg','1','2022');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Changes",'661717910','211','1','https://open.spotify.com/track/1OJg6070T1v5dVZoU8uj0m')
@@ -2118,6 +2134,25 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Chun Li Flying Bird Kick",'917130087','281','3','https://open.spotify.com/track/4DLLB9erwRrOPPVQLitCyV')
 ;
 INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('20501033','alt-J','Alt-J are an English indie rock band formed in 2007 in Leeds, by Joe Newman (guitar/lead vocals), Thom Sonny Green (drums), Gus Unger-Hamilton (keyboards/vocals) and Gwilym Sainsbury (guitar/bass).','band20501033.jpg');
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('447177535',"The Dream (Deluxe)",'20501033','cover447177535.jpg','0','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Bane",'447177535','310','1','https://open.spotify.com/track/2ex3posRNSIHGt2o6c8BDD')
+,(NULL,"U&ME",'447177535','199','2','https://open.spotify.com/track/5WXfPRIVjo2FpEAzCdtRsi')
+,(NULL,"Hard Drive Gold",'447177535','158','3','https://open.spotify.com/track/2BSJYexVsXNnb1DNBoLLan')
+,(NULL,"Happier When Youre Gone",'447177535','240','4','https://open.spotify.com/track/0G4LPpRAunooaDpPzaCPXj')
+,(NULL,"The Actor",'447177535','241','5','https://open.spotify.com/track/72ueyegb7Ueticz4vgoFTx')
+,(NULL,"Get Better",'447177535','351','6','https://open.spotify.com/track/3wKJ8734Mq9GseasvTQgbM')
+,(NULL,"Chicago",'447177535','235','7','https://open.spotify.com/track/4hi2oBX8SZkj8QJWrsG4o9')
+,(NULL,"Philadelphia",'447177535','218','8','https://open.spotify.com/track/7zDqriI5gpfWPxwDRav1eS')
+,(NULL,"Walk a Mile",'447177535','390','9','https://open.spotify.com/track/75BKbzbLK8iU7cp9Rmjlmt')
+,(NULL,"Delta",'447177535','60','10','https://open.spotify.com/track/42ug7cz6qFQzuifeAp2Fav')
+,(NULL,"Losing My Mind",'447177535','282','11','https://open.spotify.com/track/7v8gDWI6O0szcs5fG40ZJP')
+,(NULL,"Powders",'447177535','282','12','https://open.spotify.com/track/6PA1sjqTtGW0Z5egQAhCCU')
+,(NULL,"The Actor - Single Edit",'447177535','188','13','https://open.spotify.com/track/3yJaVEwHOIUyoNLioUUEMC')
+,(NULL,"U&ME - Single Edit",'447177535','197','14','https://open.spotify.com/track/2djt68JwavRdvD3HDpKo8Q')
+,(NULL,"Hard Drive Gold - LOOR Remix",'447177535','244','15','https://open.spotify.com/track/0m6RRpqhjZtqOwYgKeWTzn')
+,(NULL,"Hard Drive Gold - Maya Jane Coles Remix",'447177535','314','16','https://open.spotify.com/track/0Rc3IbsJUNLAhDlX6vQNHg')
+,(NULL,"U&ME - Baauer Remix",'447177535','294','17','https://open.spotify.com/track/1zoBNdysVkxEMfPRaFhXjR')
+;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('611109226',"The Dream",'20501033','cover611109226.jpg','0','2022');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Bane",'611109226','310','1','https://open.spotify.com/track/2PBVEbswFG0Y0wyz9iPbkf')
 ,(NULL,"U&ME",'611109226','199','2','https://open.spotify.com/track/6taNQNGdyo6PN4DPlYFf08')
@@ -4994,6 +5029,21 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Over Funk - 2006 Remaster",'801086569','178','17','https://open.spotify.com/track/0809RpHic1xrZzh9CT4wXo')
 ,(NULL,"Quixoticelixer - 2006 Remaster",'801086569','288','18','https://open.spotify.com/track/28w7CPWQCqQxt0YCzDN75b')
 ;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('839138380',"One Hot Minute",'21587430','cover839138380.jpg','0','1995');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Warped",'839138380','305','1','https://open.spotify.com/track/2xRLe9CwyZCP9RahXOP768')
+,(NULL,"Aeroplane",'839138380','285','2','https://open.spotify.com/track/41DpvNasaZdQzQqQYntd0o')
+,(NULL,"Deep Kick",'839138380','394','3','https://open.spotify.com/track/1Rq0c7NwNpEiG83ayqKb6x')
+,(NULL,"My Friends",'839138380','249','4','https://open.spotify.com/track/3iHvXVAXLpoGMWnDhpFspL')
+,(NULL,"Coffee Shop",'839138380','189','5','https://open.spotify.com/track/4vfxEvOVrT09g7STHplXG4')
+,(NULL,"Pea",'839138380','107','6','https://open.spotify.com/track/7r7yqhM033gqFTYwMi6ScN')
+,(NULL,"One Big Mob",'839138380','362','7','https://open.spotify.com/track/3mt2DCsMidMgrDkVLYB47s')
+,(NULL,"Walkabout",'839138380','307','8','https://open.spotify.com/track/6ey9DngHoganCA8WABEsLa')
+,(NULL,"Tearjerker",'839138380','260','9','https://open.spotify.com/track/73FFEEbtJjjcgzaT5VmIQM')
+,(NULL,"One Hot Minute",'839138380','384','10','https://open.spotify.com/track/51PDILgbGYlDPlW3MPNdGV')
+,(NULL,"Falling into Grace",'839138380','228','11','https://open.spotify.com/track/6cPJTBuC9sfeqyyYxwxfca')
+,(NULL,"Shallow Be Thy Game",'839138380','274','12','https://open.spotify.com/track/0cJHpIkQV1QBpMUQ5EcbDo')
+,(NULL,"Transcending",'839138380','347','13','https://open.spotify.com/track/1HlF3yjxxwhFlYvKqdwV60')
+;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('188266425',"One Hot Minute (Deluxe Edition)",'21587430','cover188266425.jpg','0','1995');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Warped",'188266425','305','1','https://open.spotify.com/track/1eLAEzLXUu6SFHS5rSCrx1')
 ,(NULL,"Aeroplane",'188266425','285','2','https://open.spotify.com/track/0VLdJcQUsqHBBwqPp4CIKJ')
@@ -5011,21 +5061,6 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Let's Make Evil - 2006 Remaster",'188266425','318','14','https://open.spotify.com/track/7FGmrbu1GeHrxrr7lr15vH')
 ,(NULL,"Stretch You Out - 2006 Remaster",'188266425','379','15','https://open.spotify.com/track/3natnOToviL79uuVacIdUO')
 ,(NULL,"Bob - 2006 Remaster",'188266425','344','16','https://open.spotify.com/track/6hMDMgqttllnWrN6g4vq9F')
-;
-INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('839138380',"One Hot Minute",'21587430','cover839138380.jpg','0','1995');
-            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Warped",'839138380','305','1','https://open.spotify.com/track/2xRLe9CwyZCP9RahXOP768')
-,(NULL,"Aeroplane",'839138380','285','2','https://open.spotify.com/track/41DpvNasaZdQzQqQYntd0o')
-,(NULL,"Deep Kick",'839138380','394','3','https://open.spotify.com/track/1Rq0c7NwNpEiG83ayqKb6x')
-,(NULL,"My Friends",'839138380','249','4','https://open.spotify.com/track/3iHvXVAXLpoGMWnDhpFspL')
-,(NULL,"Coffee Shop",'839138380','189','5','https://open.spotify.com/track/4vfxEvOVrT09g7STHplXG4')
-,(NULL,"Pea",'839138380','107','6','https://open.spotify.com/track/7r7yqhM033gqFTYwMi6ScN')
-,(NULL,"One Big Mob",'839138380','362','7','https://open.spotify.com/track/3mt2DCsMidMgrDkVLYB47s')
-,(NULL,"Walkabout",'839138380','307','8','https://open.spotify.com/track/6ey9DngHoganCA8WABEsLa')
-,(NULL,"Tearjerker",'839138380','260','9','https://open.spotify.com/track/73FFEEbtJjjcgzaT5VmIQM')
-,(NULL,"One Hot Minute",'839138380','384','10','https://open.spotify.com/track/51PDILgbGYlDPlW3MPNdGV')
-,(NULL,"Falling into Grace",'839138380','228','11','https://open.spotify.com/track/6cPJTBuC9sfeqyyYxwxfca')
-,(NULL,"Shallow Be Thy Game",'839138380','274','12','https://open.spotify.com/track/0cJHpIkQV1QBpMUQ5EcbDo')
-,(NULL,"Transcending",'839138380','347','13','https://open.spotify.com/track/1HlF3yjxxwhFlYvKqdwV60')
 ;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('723183341',"Blood Sugar Sex Magik (Deluxe Edition)",'21587430','cover723183341.jpg','0','1991');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The Power of Equality",'723183341','244','1','https://open.spotify.com/track/0eX5QY6o5cb9W72zVmWWjV')
@@ -5429,6 +5464,26 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Just a Friend",'305663770','270','1','https://open.spotify.com/track/1ZoBx2HJYtzc975zT9n16n')
 ;
 INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('74221138','The Fratellis','The Fratellis are a Scottish rock band from Glasgow, formed in 2005. The band consists of lead vocalist and guitarist Jon Fratelli, bassist and backing vocalist Barry Fratelli, and drummer and backing vocalist Mince Fratelli.','band74221138.jpg');
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('787889097',"Half Drunk Under a Full Moon (Deluxe)",'74221138','cover787889097.jpg','0','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Half Drunk Under a Full Moon",'787889097','334','1','https://open.spotify.com/track/7a0JfimSMJAqBHi0eDe3EO')
+,(NULL,"Need a Little Love",'787889097','229','2','https://open.spotify.com/track/0J6WdDEGwmWbNSUjZZ0NAo')
+,(NULL,"Lay Your Body Down",'787889097','228','3','https://open.spotify.com/track/4m2BAb4eZUQASycPNRsI99')
+,(NULL,"The Last Songbird",'787889097','241','4','https://open.spotify.com/track/2sRHR1AcR2Iuki6IAZj9zJ')
+,(NULL,"Strangers in the Street",'787889097','208','5','https://open.spotify.com/track/391hmvc6DbRBv8lm0gQwJp')
+,(NULL,"Living in the Dark",'787889097','189','6','https://open.spotify.com/track/4O6iS1B2t7nq9DkDOMXO9A')
+,(NULL,"Action Replay",'787889097','250','7','https://open.spotify.com/track/3oNdLkKIKJ3LaAXJAfCn5u')
+,(NULL,"Six Days in June",'787889097','221','8','https://open.spotify.com/track/02Ch2xywB7LNuETyw2eLlO')
+,(NULL,"Oh Roxy",'787889097','257','9','https://open.spotify.com/track/0h8ot6KXeVfF8IutMLFt8R')
+,(NULL,"Hello Stranger",'787889097','376','10','https://open.spotify.com/track/35uryyfU38gDop0uOJ6vu1')
+,(NULL,"Runaround Sue",'787889097','191','11','https://open.spotify.com/track/62YJKaFDiW0loOSy763t8y')
+,(NULL,"Alive",'787889097','245','12','https://open.spotify.com/track/5EKqcLgw4NiWjYqBQQJnxU')
+,(NULL,"Closing Time Again",'787889097','192','13','https://open.spotify.com/track/6evaPfCWO1G1Vjq6QeS2ny')
+,(NULL,"Need a Little Love (The Skeletonic Sessions)",'787889097','239','14','https://open.spotify.com/track/3kkit8S9tt4CPHxbKZx3p0')
+,(NULL,"Laughing Gas (For Leonard)",'787889097','312','15','https://open.spotify.com/track/6bw5YcmPRt7un87qJbJp9e')
+,(NULL,"Lay Your Body Down (Sloe Gin Version)",'787889097','272','16','https://open.spotify.com/track/1Wf2fqdPetYrgFIsBbdbUb')
+,(NULL,"Hello Stranger (Old Fashioned Version)",'787889097','388','17','https://open.spotify.com/track/44Sdge3eFxIPC6OlqdZ52Y')
+,(NULL,"Yes Sir, I Can Boogie",'787889097','274','18','https://open.spotify.com/track/7gwm5Iqz6vrLX00qE3YxfO')
+;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('142373185',"Half Drunk Under a Full Moon",'74221138','cover142373185.jpg','0','2021');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Half Drunk Under a Full Moon",'142373185','334','1','https://open.spotify.com/track/4JOMS34aUbcZAIpLl1bch0')
 ,(NULL,"Need a Little Love",'142373185','229','2','https://open.spotify.com/track/0ZLVVLGWen1f6sT2ry0zDc')
@@ -5523,20 +5578,20 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Milk & Money",'749090297','282','11','https://open.spotify.com/track/5viJxrhdosxi1lGMCZhNPD')
 ,(NULL,"Nobodys Favourite Actor",'749090297','240','12','https://open.spotify.com/track/4ce9iro2dIOWeEIINDOZa0')
 ;
-INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('20360620',"Costello Music",'74221138','cover20360620.jpg','0','2006');
-            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Henrietta",'20360620','212','1','https://open.spotify.com/track/1jK5Brpzn8UX8eKoifXLOo')
-,(NULL,"Flathead",'20360620','198','2','https://open.spotify.com/track/0bBRX8ozoagff36pZG6vEO')
-,(NULL,"Whistle For The Choir",'20360620','216','3','https://open.spotify.com/track/3rXCnvL6xP83VsYUg4rm7e')
-,(NULL,"Chelsea Dagger",'20360620','215','4','https://open.spotify.com/track/1bCmvezFg5MRcENzCGG1Cy')
-,(NULL,"For The Girl",'20360620','168','5','https://open.spotify.com/track/6bX1WRz0GhNvwiCumOj2AA')
-,(NULL,"Doginabag",'20360620','201','6','https://open.spotify.com/track/7tpVsEqVLj4nxdQS6LQhb6')
-,(NULL,"Creepin Up The Backstairs - Composite Edit (do not put on a/w)",'20360620','187','7','https://open.spotify.com/track/67ptO6Ojg1MpuTQO1G4js7')
-,(NULL,"Vince The Loveable Stoner",'20360620','194','8','https://open.spotify.com/track/6Iix0QjOoep2SveqQ32fOX')
-,(NULL,"Everybody Knows You Cried Last Night",'20360620','234','9','https://open.spotify.com/track/2Ub7MUaOSQko1O6X6f4B4w')
-,(NULL,"Baby Fratelli",'20360620','237','10','https://open.spotify.com/track/3TLuFAWAEFsUBKL7QCAVgO')
-,(NULL,"Got Ma Nuts From A Hippie",'20360620','191','11','https://open.spotify.com/track/4eSUuZraVjmb67iNJTvypz')
-,(NULL,"Ole Black 'n' Blue Eyes",'20360620','194','12','https://open.spotify.com/track/11HcRyfyVdUtqo30CJFa1J')
-,(NULL,"Cuntry Boys & City Girls",'20360620','213','13','https://open.spotify.com/track/7JsS7PavniuRJV2eEZf6Rt')
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('549040172',"Costello Music",'74221138','cover549040172.jpg','0','2006');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Henrietta",'549040172','212','1','https://open.spotify.com/track/69h2mpzNUmdEg5egeNa1ki')
+,(NULL,"Flathead",'549040172','198','2','https://open.spotify.com/track/7BMKUZ2LFwRJxIuTe7e9xY')
+,(NULL,"Cuntry Boys & City Girls",'549040172','211','3','https://open.spotify.com/track/2cRdtQt7Iii6y1LzW9cXwe')
+,(NULL,"Whistle For The Choir",'549040172','216','4','https://open.spotify.com/track/5xHDHZFz4iADxehEgyjMhw')
+,(NULL,"Chelsea Dagger",'549040172','215','5','https://open.spotify.com/track/0txisWocI2H8yPRjYxLo83')
+,(NULL,"For The Girl",'549040172','168','6','https://open.spotify.com/track/0A6mmHc95Sklnv9RWwYYsJ')
+,(NULL,"Doginabag",'549040172','201','7','https://open.spotify.com/track/5B1rKd3tBqOkGlezjTkSvo')
+,(NULL,"Creepin Up The Backstairs - Composite Edit (do not put on a/w)",'549040172','187','8','https://open.spotify.com/track/0jt6NEuzEY0OouXkwZHq5n')
+,(NULL,"Vince The Loveable Stoner",'549040172','194','9','https://open.spotify.com/track/4WNegjB8eSeJsxhmEWiBQQ')
+,(NULL,"Everybody Knows You Cried Last Night",'549040172','234','10','https://open.spotify.com/track/6KPjJiNUCXVZQcREwMwj5V')
+,(NULL,"Baby Fratelli",'549040172','237','11','https://open.spotify.com/track/5igni06exn4vGL8zVvT5yk')
+,(NULL,"Got Ma Nuts From A Hippie",'549040172','191','12','https://open.spotify.com/track/0I4ci8XGrG2xBqHLvirDip')
+,(NULL,"Ole Black 'n' Blue Eyes",'549040172','196','13','https://open.spotify.com/track/2NjETNqIXk4JlJFkEDmM5t')
 ;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('194722408',"Yes Sir, I Can Boogie",'74221138','cover194722408.jpg','1','2021');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Yes Sir, I Can Boogie",'194722408','274','1','https://open.spotify.com/track/2roq62CaO3lRZfEN8GSmHQ')
@@ -6014,13 +6069,6 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Plateau",'284478430','222','9','https://open.spotify.com/track/2VTLOwe4ZTOdx0rjMtOKiy')
 ,(NULL,"Sad Clown",'284478430','183','10','https://open.spotify.com/track/4SwRrFykEi1rVQqrRfxQAB')
 ;
-INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('113872470',"Heatwave",'20047261','cover113872470.jpg','1','2022');
-            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Heatwave",'113872470','154','1','https://open.spotify.com/track/0rcCrtUpRPmhfNgn54IBim')
-,(NULL,"Lore",'113872470','202','2','https://open.spotify.com/track/2xcLyLijuMGQ1GANkSQGQW')
-,(NULL,"Devil for the Fire",'113872470','222','3','https://open.spotify.com/track/65VEvRrNbPD4M8QhAztYZn')
-,(NULL,"Aphasia",'113872470','161','4','https://open.spotify.com/track/7zCPg5HUeFLwn33gZhMLy8')
-,(NULL,"Ringing Bell",'113872470','161','5','https://open.spotify.com/track/4VcRkenu3rs6DuqpkNWuhR')
-;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('249541234',"Alien Blues (Redux)",'20047261','cover249541234.jpg','1','2022');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Alien Blues (Feat. Indigo De Souza) - Redux",'249541234','155','1','https://open.spotify.com/track/2lLichO1EHChwrxdeL5s9M')
 ,(NULL,"Alien Blues",'249541234','156','2','https://open.spotify.com/track/0lnIyr8NypB45OwFrHWFgg')
@@ -6063,7 +6111,7 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ,(NULL,"Winter",'278123061','286','5','https://open.spotify.com/track/5zDbzBnptF5hDQRLkqJ6zJ')
 ,(NULL,"All the Funds",'278123061','401','6','https://open.spotify.com/track/2ldunHrbr3v4JKOBwQSjYl')
 ;
-INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('80794292','Blur','Blur','band80794292.jpg');
+INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('80794292','Blur','Blur are an English rock band. Formed in London in 1988','band80794292.jpg');
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('286889827',"The Magic Whip",'80794292','cover286889827.jpg','0','2015');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Lonesome Street",'286889827','263','1','https://open.spotify.com/track/2BSDAVUzzQP7wpvcDybmsP')
 ,(NULL,"New World Towers",'286889827','244','2','https://open.spotify.com/track/0VNLvVaS0Njds7K6kD1iss')
@@ -6473,4 +6521,440 @@ INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) 
 ;
 INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('226098395',"Intermission",'80794292','cover226098395.jpg','1','1993');
             INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Intermission",'226098395','150','1','https://open.spotify.com/track/7c3NImFA23mDCifvAzSu0T')
+;
+INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('53951829','King Gizzard & The Lizard Wizard','King Gizzard & the Lizard Wizard are an Australian rock band formed in 2010 in Melbourne, Victoria','band53951829.jpg');
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('213264118',"Omnium Gatherum",'53951829','cover213264118.jpg','0','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The Dripping Tap",'213264118','1097','1','https://open.spotify.com/track/0o6rOggbaLEvtwUHNztuD2')
+,(NULL,"Magenta Mountain",'213264118','365','2','https://open.spotify.com/track/23azGRczkSa6JF9JKKiBh2')
+,(NULL,"Kepler-22b",'213264118','193','3','https://open.spotify.com/track/1d7amkMBfY5jwDaVYpWKUv')
+,(NULL,"Gaia",'213264118','311','4','https://open.spotify.com/track/6TpOpsgXwMvm0bSkdq27EC')
+,(NULL,"Ambergris",'213264118','267','5','https://open.spotify.com/track/5sLL7hWj9qTGlO6MIUEnk4')
+,(NULL,"Sadie Sorceress",'213264118','188','6','https://open.spotify.com/track/6AcCvbJxR4PO6Fzv0UYdyW')
+,(NULL,"Evilest Man",'213264118','459','7','https://open.spotify.com/track/4CiIQIyFf0TR29jnvvQ9NQ')
+,(NULL,"The Garden Goblin",'213264118','177','8','https://open.spotify.com/track/2W3GEjnvWryAeUEqmNYRlR')
+,(NULL,"Blame It On The Weather",'213264118','151','9','https://open.spotify.com/track/1vh2fa89nOKLKJlrhLs6cL')
+,(NULL,"Persistence",'213264118','228','10','https://open.spotify.com/track/1Zmi9ADrlNq0X8MmJIcbTN')
+,(NULL,"The Grim Reaper",'213264118','186','11','https://open.spotify.com/track/0ECiluD6uszk2zjph2pyEp')
+,(NULL,"Presumptuous",'213264118','293','12','https://open.spotify.com/track/6xoN3e0MNA43kVcKGwK9Y4')
+,(NULL,"Predator X",'213264118','226','13','https://open.spotify.com/track/5Rf9JILgZNODI0dnufYRW9')
+,(NULL,"Red Smoke",'213264118','262','14','https://open.spotify.com/track/44KDH0F0smqMcRqzTt3P65')
+,(NULL,"Candles",'213264118','274','15','https://open.spotify.com/track/7wqDXSLMhBI1pQ3P3hx3A9')
+,(NULL,"The Funeral",'213264118','143','16','https://open.spotify.com/track/2syoVYOvJnsNU5dpriVsok')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('863591009',"Butterfly 3001",'53951829','cover863591009.jpg','0','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Black Hot Soup - DJ Shadow My Own Reality Re-Write",'863591009','216','1','https://open.spotify.com/track/1ZFPf1rgLHVKPqMgR4BqV8')
+,(NULL,"Shanghai - The Scientist Dub",'863591009','241','2','https://open.spotify.com/track/6tyYJVxcTOZMHTAIgLH0rD')
+,(NULL,"Shanghai - Deaton Chris Anthony Remix",'863591009','212','3','https://open.spotify.com/track/0pqQZykxE1qrHF14MeDENd')
+,(NULL,"Dreams - Yu Su Instrumental Mix",'863591009','314','4','https://open.spotify.com/track/66dDmV9aNRTPlP0chPI3VK')
+,(NULL,"Blue Morpho - Donato Dozzy Remix",'863591009','298','5','https://open.spotify.com/track/39KJzEAEeo5I8DGG3Ka7zQ')
+,(NULL,"Blue Morpho - VRIL Remix",'863591009','269','6','https://open.spotify.com/track/3cQ6IKXeTbWH69XUqSZUIj')
+,(NULL,"Blue Morpho - Ciel's Fluttering Dub",'863591009','349','7','https://open.spotify.com/track/5kUoRlnUQCvoCQXjLkCMgh')
+,(NULL,"Blue Morpho - ZANDOLI II remix",'863591009','237','8','https://open.spotify.com/track/2cEWPL8GEdFWgU7bjWfpiV')
+,(NULL,"Catching Smoke - DM-FunK Instrumental Re-Freak",'863591009','397','9','https://open.spotify.com/track/3zeDhGia4tfz65DCQb8q4t')
+,(NULL,"Ya Love - Flaming Lips Fascinating Haircut Re-Do",'863591009','177','10','https://open.spotify.com/track/7lwK7ckctPkFGKsWpzSKxN')
+,(NULL,"Ya Love - Geneva Jacuzzi Remix",'863591009','268','11','https://open.spotify.com/track/7qxQQptd3tTnZCIrPeB8EN')
+,(NULL,"Ya Love - Hctor Oaks Playing w/ Fire Mix",'863591009','393','12','https://open.spotify.com/track/0kIQL6lt4rNDeukrpAAAI7')
+,(NULL,"2.02 Killer Year - Bullants Fuck Mike Love Remix",'863591009','490','13','https://open.spotify.com/track/1hARwqQo4c6xUVOKGw2Vid')
+,(NULL,"Yours - Fred P Journey Mix",'863591009','715','14','https://open.spotify.com/track/2fLTm9bfdLWJQaNk74Yrv8')
+,(NULL,"Butterfly 3000 - Terry Tracksuit Remix",'863591009','150','15','https://open.spotify.com/track/483Og0BIIM315Xpun9EWvV')
+,(NULL,"Neu Butterfly 3000 - Peaches Remix",'863591009','345','16','https://open.spotify.com/track/3Od0b41S43Gn4TbCvXIcXR')
+,(NULL,"Catching Smoke - 4am Wack Rmx By Hieroglyphic Being",'863591009','688','17','https://open.spotify.com/track/6iR72qCN4t592bJGt0IVxt')
+,(NULL,"Blue Morpho - Mall Grab Remix",'863591009','248','18','https://open.spotify.com/track/4NXNJNI0aJoE4L8L195e2D')
+,(NULL,"Dreams - Peaking Lights Trancedellic Macrodosing Mix",'863591009','326','19','https://open.spotify.com/track/0uZ1mZ8NisqUc6YQJRuSbc')
+,(NULL,"Interior People - Confidence Man Remix",'863591009','354','20','https://open.spotify.com/track/6bcwflXyN2zPPVpUWWKCJ2')
+,(NULL,"Catching Smoke - Kaitlyn Aurelia Smith Remix",'863591009','175','21','https://open.spotify.com/track/2dvDfYhXY2wwgGdJpPav5r')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('32952693',"Butterfly 3000",'53951829','cover32952693.jpg','0','2021');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Yours",'32952693','275','1','https://open.spotify.com/track/5QCjuJcYKFBIXFQM5BytEz')
+,(NULL,"Shanghai",'32952693','241','2','https://open.spotify.com/track/6HlWKkzNE1WP67OGqtGeBW')
+,(NULL,"Dreams",'32952693','244','3','https://open.spotify.com/track/23Gdeg8PHxK7YymMcuG0A2')
+,(NULL,"Blue Morpho",'32952693','231','4','https://open.spotify.com/track/0sajVraFsiilMTL1XkCDhJ')
+,(NULL,"Interior People",'32952693','315','5','https://open.spotify.com/track/3tj1cKu9SOnchX6twBKn30')
+,(NULL,"Catching Smoke",'32952693','388','6','https://open.spotify.com/track/4soZjBWp9Xxri3tkdnyEP5')
+,(NULL,"2.02 Killer Year",'32952693','199','7','https://open.spotify.com/track/1ThWxrNZDMU8k1Y9ZlLE5e')
+,(NULL,"Black Hot Soup",'32952693','312','8','https://open.spotify.com/track/2T8F1rmU0vvbE1Ed40Nf6R')
+,(NULL,"Ya Love",'32952693','256','9','https://open.spotify.com/track/3gks6iUsfZztKJPkaAkf2L')
+,(NULL,"Butterfly 3000",'32952693','171','10','https://open.spotify.com/track/28bl5c2TPMnActyu7S6fkv')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('497968409',"L.W.",'53951829','cover497968409.jpg','0','2021');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"If Not Now, Then When?",'497968409','230','1','https://open.spotify.com/track/1nkMRXPRGtwWGIfWaXt3na')
+,(NULL,"O.N.E.",'497968409','220','2','https://open.spotify.com/track/5Tr57zEsUBRckxVrwgsoQU')
+,(NULL,"Pleura",'497968409','251','3','https://open.spotify.com/track/44nBgiXq0sz8bAeFft2DEX')
+,(NULL,"Supreme Ascendancy",'497968409','220','4','https://open.spotify.com/track/4Vo10vqYyiMothk4P7Xed3')
+,(NULL,"Static Electricity",'497968409','350','5','https://open.spotify.com/track/7xB5II5gGyfdAVGpmerYVq')
+,(NULL,"East West Link",'497968409','189','6','https://open.spotify.com/track/3hFhPZ9ApoLLQ3bGCDlCDs')
+,(NULL,"Ataraxia",'497968409','318','7','https://open.spotify.com/track/3GZZMVcnR8N99LkYU9tpC7')
+,(NULL,"See Me",'497968409','244','8','https://open.spotify.com/track/7LOgi68eugnunVQikONhTt')
+,(NULL,"K.G.L.W.",'497968409','508','9','https://open.spotify.com/track/4QugdF1lazluZvplbfVjCR')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('582512107',"K.G.",'53951829','cover582512107.jpg','0','2020');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"K.G.L.W.",'582512107','97','1','https://open.spotify.com/track/7sd7teUrIBBxNMGG9BDXic')
+,(NULL,"Automation",'582512107','210','2','https://open.spotify.com/track/03CS8ifzdYuzNCyzshYl7Z')
+,(NULL,"Minimum Brain Size",'582512107','259','3','https://open.spotify.com/track/7iNad5DstgVA6wJUHmN4LS')
+,(NULL,"Straws In The Wind",'582512107','342','4','https://open.spotify.com/track/2w4OcWZCTQ5x4iqioo6qMW')
+,(NULL,"Some Of Us",'582512107','233','5','https://open.spotify.com/track/19tGNexxvP4HLSeOiuN32m')
+,(NULL,"Ontology",'582512107','238','6','https://open.spotify.com/track/5Pys5Lcouq7xrXha5rgC2i')
+,(NULL,"Intrasport",'582512107','253','7','https://open.spotify.com/track/28c8ZDVltaCcs4OfIAuI8Z')
+,(NULL,"Oddlife",'582512107','298','8','https://open.spotify.com/track/2J2ffA3bkOMGtsQaQ6825Y')
+,(NULL,"Honey",'582512107','274','9','https://open.spotify.com/track/0nObOnIxnz6PlPf04tZh1g')
+,(NULL,"The Hungry Wolf Of Fate",'582512107','308','10','https://open.spotify.com/track/3s9cNgAYYh3jK4ZLbAPruH')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('867572028',"Chunky Shrapnel",'53951829','cover867572028.jpg','0','2020');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Evil Star",'867572028','130','1','https://open.spotify.com/track/6NIBWoV4UHNBI86YEwMQg8')
+,(NULL,"The River - live in Luxembourg '19",'867572028','579','2','https://open.spotify.com/track/2pd04Yl1eAUdADj6hBShdE')
+,(NULL,"Wah Wah - live in Madrid '19",'867572028','204','3','https://open.spotify.com/track/48dOaWEFdMFUZaRnMOBnox')
+,(NULL,"Road Train - live in Manchester '19",'867572028','219','4','https://open.spotify.com/track/23iZpQz5muM6WPFRufTsII')
+,(NULL,"Murder of the Universe - live in Utrecht '19",'867572028','304','5','https://open.spotify.com/track/41YMey6aUEuBqK0Kz7Tnfq')
+,(NULL,"Quarantine",'867572028','121','6','https://open.spotify.com/track/0vvDgx4YRdo3rorgokG7kb')
+,(NULL,"Planet B - live in London '19",'867572028','363','7','https://open.spotify.com/track/4fgsnqIPZKAN6rIQzyPFju')
+,(NULL,"Parking - live in Brussels '19",'867572028','123','8','https://open.spotify.com/track/6c3gWV2uDp6dm9oB0Qanet')
+,(NULL,"Venusian 2 - live in Milan '19",'867572028','191','9','https://open.spotify.com/track/1TMIaOflUsOvqleHPSs8Ib')
+,(NULL,"Hell - live in Milan '19",'867572028','217','10','https://open.spotify.com/track/6GCojiDY3527BMsrZlh0uw')
+,(NULL,"Let Me Mend The Past - live in Madrid '19",'867572028','178','11','https://open.spotify.com/track/3Tt77Xj2Z7VfwKWYgfnmWM')
+,(NULL,"Anamnesis",'867572028','190','12','https://open.spotify.com/track/7vA5UvxVV7kmkBIWn27OLb')
+,(NULL,"Inner Cell - live in Utrecht '19",'867572028','230','13','https://open.spotify.com/track/5ud2eOOoc5QBNmNy0lccw9')
+,(NULL,"Loyalty - live in Utrecht '19",'867572028','233','14','https://open.spotify.com/track/1QJXEzRBLQ3kXzp0Sg6dOT')
+,(NULL,"Horology - live in Utrecht '19",'867572028','156','15','https://open.spotify.com/track/6BMNUlwLzaI2CctsvUudaM')
+,(NULL,"A Brief History Of Planet Earth - live in London, Berlin, Utrecht and Barcelona '19",'867572028','1144','16','https://open.spotify.com/track/0uBtWhPiN6hFq873LCjD9U')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('5981435',"Infest The Rats' Nest",'53951829','cover5981435.jpg','0','2019');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Planet B",'5981435','236','1','https://open.spotify.com/track/3YCiB91fQ6aGH3KkBEyriG')
+,(NULL,"Mars For The Rich",'5981435','252','2','https://open.spotify.com/track/28g36UySJI1jAevLxxjXU9')
+,(NULL,"Organ Farmer",'5981435','159','3','https://open.spotify.com/track/43xYug1HMWU5KZroVqbjsw')
+,(NULL,"Superbug",'5981435','403','4','https://open.spotify.com/track/0hSF9dyACqgzexLwubaR6x')
+,(NULL,"Venusian 1",'5981435','201','5','https://open.spotify.com/track/3lV3RvbPouZ95UNohTgCEr')
+,(NULL,"Perihelion",'5981435','191','6','https://open.spotify.com/track/1kxWrpgODTALmgRj45qWCg')
+,(NULL,"Venusian 2",'5981435','164','7','https://open.spotify.com/track/3TsK6is0oWPE02ifFbSXh7')
+,(NULL,"Self-Immolate",'5981435','269','8','https://open.spotify.com/track/5Pkp3DSLtI0B6yuglvpNek')
+,(NULL,"Hell",'5981435','220','9','https://open.spotify.com/track/4JxOs3I8tRCSugUmHf4xep')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('350649147',"Fishing For Fishies",'53951829','cover350649147.jpg','0','2019');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Fishing For Fishies",'350649147','301','1','https://open.spotify.com/track/4BgbWIYZ2ulDemkKD9TO88')
+,(NULL,"Boogieman Sam",'350649147','282','2','https://open.spotify.com/track/4KCnknPdoZWVwtBzNu7xpK')
+,(NULL,"The Bird Song",'350649147','265','3','https://open.spotify.com/track/3albRz1vGpxGo5xSnGirhk')
+,(NULL,"Plastic Boogie",'350649147','183','4','https://open.spotify.com/track/7kyOCBT1KyUQIVDYfhfAio')
+,(NULL,"The Cruel Millennial",'350649147','297','5','https://open.spotify.com/track/3VL55EXfs4a9Typ5pTRpYA')
+,(NULL,"Real's Not Real",'350649147','221','6','https://open.spotify.com/track/0J1Xwo9cv0iL81ZWworWek')
+,(NULL,"This Thing",'350649147','240','7','https://open.spotify.com/track/18QnqtlHGAdDAnYzdjzUKi')
+,(NULL,"Acarine",'350649147','324','8','https://open.spotify.com/track/0qvbzYQybDKYi1HZEGT26i')
+,(NULL,"Cyboogie",'350649147','408','9','https://open.spotify.com/track/1E1JphvbvqNlWjLNfDOlR7')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('981534483',"Gumboot Soup",'53951829','cover981534483.jpg','0','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Beginner's Luck",'981534483','265','1','https://open.spotify.com/track/5ArDLzBtaF7wRpO7xw08I9')
+,(NULL,"Greenhouse Heat Death",'981534483','253','2','https://open.spotify.com/track/15oHp2SomYP2riNvICIont')
+,(NULL,"Barefoot Desert",'981534483','224','3','https://open.spotify.com/track/1ANfY2E3Ymf4ldnm6rexQj')
+,(NULL,"Muddy Water",'981534483','219','4','https://open.spotify.com/track/7dqSDzxyknCATgs7V1vyl8')
+,(NULL,"Superposition",'981534483','215','5','https://open.spotify.com/track/1c6BZq6Ca49PT43fr4AbEd')
+,(NULL,"Down the Sink",'981534483','240','6','https://open.spotify.com/track/3jWs2jDjzZLeYfbMSlFddA')
+,(NULL,"The Great Chain of Being",'981534483','290','7','https://open.spotify.com/track/3pQKx4wkWzoRtKgvjC1502')
+,(NULL,"The Last Oasis",'981534483','215','8','https://open.spotify.com/track/3XCupILkcLcf5AsYkhXB3e')
+,(NULL,"All Is Known",'981534483','214','9','https://open.spotify.com/track/7MFj4HeAhGQ8jef7aSvskj')
+,(NULL,"I'm Sleepin' In",'981534483','180','10','https://open.spotify.com/track/3IngTQWXatGiTHJeDHr1d8')
+,(NULL,"The Wheel",'981534483','337','11','https://open.spotify.com/track/6wGlyEFqDI7QoDTzAk6MRy')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('932745850',"Polygondwanaland",'53951829','cover932745850.jpg','0','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Crumbling Castle",'932745850','644','1','https://open.spotify.com/track/5hiTOgD1obV1UMynKtvMCU')
+,(NULL,"Polygondwanaland",'932745850','213','2','https://open.spotify.com/track/5K3drs66QoLhSFnw4q5KFn')
+,(NULL,"The Castle in the Air",'932745850','168','3','https://open.spotify.com/track/653J62wpI6zYETZPHmUyhp')
+,(NULL,"Deserted Dunes Welcome Weary Feet",'932745850','214','4','https://open.spotify.com/track/2kvWCgCeIGa3cgv2gIFuwB')
+,(NULL,"Inner Cell",'932745850','236','5','https://open.spotify.com/track/4JwlIfFB4KBmREZqSPCWTs')
+,(NULL,"Loyalty",'932745850','219','6','https://open.spotify.com/track/6LjQv2xoFokyGey3V6KHO4')
+,(NULL,"Horology",'932745850','172','7','https://open.spotify.com/track/3iUcu9hvY4CRrDNkTlMHhd')
+,(NULL,"Tetrachromacy",'932745850','211','8','https://open.spotify.com/track/18lJLQORB0co2mW8qYo8cT')
+,(NULL,"Searching",'932745850','184','9','https://open.spotify.com/track/5Tv0FBvaUJqzCGp9xzk5hT')
+,(NULL,"The Fourth Colour",'932745850','372','10','https://open.spotify.com/track/3Mvxf2cvPxAsLanPSGz2rk')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('561252338',"Sketches of Brunswick East",'53951829','cover561252338.jpg','0','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Sketches of Brunswick East I",'561252338','80','1','https://open.spotify.com/track/5zEsm5jtuR2lofBhPsyYr8')
+,(NULL,"Countdown",'561252338','203','2','https://open.spotify.com/track/5e22L7DIV7SsjB7qZ3mJxU')
+,(NULL,"D-Day",'561252338','99','3','https://open.spotify.com/track/6Y3ZZeYywgLC0H66uipkgx')
+,(NULL,"Tezeta",'561252338','211','4','https://open.spotify.com/track/2eG4VlTLV6Zj9fDw3Ek3AV')
+,(NULL,"Cranes, Planes, Migraines",'561252338','75','5','https://open.spotify.com/track/7uGWo9LEsHzotXEQfO4b8v')
+,(NULL,"The Spider and Me",'561252338','196','6','https://open.spotify.com/track/2nFDjlMQOFdgh5RKrbpb5u')
+,(NULL,"Sketches of Brunswick East II",'561252338','206','7','https://open.spotify.com/track/4wxTmbq0PouQbjimGEw9E4')
+,(NULL,"Dusk to Dawn on Lygon Street",'561252338','183','8','https://open.spotify.com/track/43KAvkihmc1mIRbrmSQu84')
+,(NULL,"The Book",'561252338','299','9','https://open.spotify.com/track/6w9KykuPl8dg1ZBVawqZVB')
+,(NULL,"A Journey to S(Hell)",'561252338','137','10','https://open.spotify.com/track/5OS0DzYc8UYTU3yRDsPx3k')
+,(NULL,"Rolling Stoned",'561252338','198','11','https://open.spotify.com/track/6MrpPmi0z0gAp79e4t0Z59')
+,(NULL,"You Can Be Your Silhouette",'561252338','230','12','https://open.spotify.com/track/0Z4rV6UpKVql6CzJ4lLBAi')
+,(NULL,"Sketches of Brunswick East III",'561252338','129','13','https://open.spotify.com/track/2UnHNBuU91LIyz5g3junXs')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('797709983',"Murder of the Universe",'53951829','cover797709983.jpg','0','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"A New World",'797709983','57','1','https://open.spotify.com/track/7A57Y2DRxN4fMfL4HN7qty')
+,(NULL,"Altered Beast I",'797709983','144','2','https://open.spotify.com/track/4zXCGnMZOXNKuqOkDTj1M6')
+,(NULL,"Alter Me I",'797709983','46','3','https://open.spotify.com/track/4curGvEyil0MgoxVHGsWms')
+,(NULL,"Altered Beast II",'797709983','269','4','https://open.spotify.com/track/1HTv5X3sRTkBfu9f6su0MZ')
+,(NULL,"Alter Me II",'797709983','86','5','https://open.spotify.com/track/3q3dDWc45EW1Au5NJDZ9mv')
+,(NULL,"Altered Beast III",'797709983','135','6','https://open.spotify.com/track/1KcAMSvVyxA5gqmrFlv1Uf')
+,(NULL,"Alter Me III",'797709983','86','7','https://open.spotify.com/track/2CgrWsRCrslmfY9v75ipcm')
+,(NULL,"Altered Beast IV",'797709983','311','8','https://open.spotify.com/track/4FOv66RLKL2pD1lFch5rQP')
+,(NULL,"Life / Death",'797709983','59','9','https://open.spotify.com/track/5BOtf6n3DwJU9uttXI9RnU')
+,(NULL,"Some Context",'797709983','17','10','https://open.spotify.com/track/2MV9sGmINkvCzzbQj5vhh0')
+,(NULL,"The Reticent Raconteur",'797709983','65','11','https://open.spotify.com/track/2Pj42cPhYdNzriLvOJhGih')
+,(NULL,"The Lord of Lightning",'797709983','307','12','https://open.spotify.com/track/3FaZ3CRwOapV6ngeEpcrpO')
+,(NULL,"The Balrog",'797709983','269','13','https://open.spotify.com/track/3pG4mtNIWwcXxPmTyaJFw4')
+,(NULL,"The Floating Fire",'797709983','114','14','https://open.spotify.com/track/0Xl0R4SDnT29n9WuXRTrFF')
+,(NULL,"The Acrid Corpse",'797709983','61','15','https://open.spotify.com/track/13dW5PLuPd5XvM3wEdkMQV')
+,(NULL,"Welcome to an Altered Future",'797709983','55','16','https://open.spotify.com/track/6ioaq9yDIYc1sWY26yd9UT')
+,(NULL,"Digital Black",'797709983','167','17','https://open.spotify.com/track/5AlZm6havyLaFKOhzuhQ3x')
+,(NULL,"Han-Tyumi, the Confused Cyborg",'797709983','142','18','https://open.spotify.com/track/6rcYD9STqL8NDcrG3xU8Fp')
+,(NULL,"Soy-Protein Munt Machine",'797709983','30','19','https://open.spotify.com/track/7bD5MdDjW4i4I10KnPrFWS')
+,(NULL,"Vomit Coffin",'797709983','139','20','https://open.spotify.com/track/4Qo0gtbNOO0lQEcKKGZPau')
+,(NULL,"Murder of the Universe",'797709983','250','21','https://open.spotify.com/track/72tP1DZ49XrjaquBUQEziR')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('398369959',"Flying Microtonal Banana",'53951829','cover398369959.jpg','0','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Rattlesnake",'398369959','468','1','https://open.spotify.com/track/2jImrW8JHP3o4zIyjLRVMV')
+,(NULL,"Melting",'398369959','327','2','https://open.spotify.com/track/7ISi5OzA82lYfx6ls4kxkY')
+,(NULL,"Open Water",'398369959','434','3','https://open.spotify.com/track/6Z5sq0QkpwAlNJkuLMKVuo')
+,(NULL,"Sleep Drifter",'398369959','285','4','https://open.spotify.com/track/73G2yz58Faqm5GoqfGOPBK')
+,(NULL,"Billabong Valley",'398369959','215','5','https://open.spotify.com/track/6Guxzc2HWm30805EdkASNI')
+,(NULL,"Anoxia",'398369959','184','6','https://open.spotify.com/track/4R0VWGTTDa72JeOzXeQ9QT')
+,(NULL,"Doom City",'398369959','194','7','https://open.spotify.com/track/7ppKF8xQY8IJYo83FGIebt')
+,(NULL,"Nuclear Fusion",'398369959','255','8','https://open.spotify.com/track/5iGPF5Vg43aZ2QTXslY6VA')
+,(NULL,"Flying Microtonal Banana",'398369959','154','9','https://open.spotify.com/track/7qFtXkuh6UPcsDdq5P41MX')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('23678875',"Nonagon Infinity",'53951829','cover23678875.jpg','0','2016');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Robot Stop",'23678875','322','1','https://open.spotify.com/track/35e0vaczX7Ao2yFysgQUHy')
+,(NULL,"Big Fig Wasp",'23678875','295','2','https://open.spotify.com/track/5bEXgmRIUDSDwvy86IFD3r')
+,(NULL,"Gamma Knife",'23678875','261','3','https://open.spotify.com/track/2gpCHJRJdZ5Z2Crqe1HCrZ')
+,(NULL,"People-Vultures",'23678875','285','4','https://open.spotify.com/track/2BQ2uBgNKXzDPpZYTY9yAH')
+,(NULL,"Mr.Beat",'23678875','296','5','https://open.spotify.com/track/6oFlOPMIF7m46eiWTfHeSy')
+,(NULL,"Evil Death Roll",'23678875','434','6','https://open.spotify.com/track/0QzcmN5x7TCSl5hQzzshIe')
+,(NULL,"Invisible Face",'23678875','181','7','https://open.spotify.com/track/0poAAESgQ1dHkfW06kdvEM')
+,(NULL,"Wah Wah",'23678875','174','8','https://open.spotify.com/track/6MVypZKDwqKrp6de721hYO')
+,(NULL,"Road Train",'23678875','258','9','https://open.spotify.com/track/16bdhJEh7J2A4TLYAx9IqC')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('869780762',"Paper Mch Dream Balloon",'53951829','cover869780762.jpg','0','2015');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Sense",'869780762','211','1','https://open.spotify.com/track/1Kbkb3RaIxw8M96Sql65ST')
+,(NULL,"Bone",'869780762','136','2','https://open.spotify.com/track/6AwXuMMzhW39jgCFyDmV7c')
+,(NULL,"Dirt",'869780762','171','3','https://open.spotify.com/track/7hiDxX51TFzOkG7L8rSo50')
+,(NULL,"Paper Mache Dream Balloon",'869780762','159','4','https://open.spotify.com/track/6dnQlL9BlRM3lxp4Vg2V1H')
+,(NULL,"Trapdoor",'869780762','159','5','https://open.spotify.com/track/37GIy1593rb7uyrBJLj3aU')
+,(NULL,"Cold Cadaver",'869780762','164','6','https://open.spotify.com/track/7eQLH1oRtsQ6nJFABq8uxA')
+,(NULL,"The Bitter Boogie",'869780762','269','7','https://open.spotify.com/track/3EsHQv1T0AQLQ7A4INNPgX')
+,(NULL,"N.G.R.I (Bloodstain)",'869780762','146','8','https://open.spotify.com/track/6Qycvi6TlS27Lo7TC8Ja7P')
+,(NULL,"Time=Fate",'869780762','147','9','https://open.spotify.com/track/0SO3Af7W3XRblwoa2hbJwV')
+,(NULL,"Time=$$$",'869780762','125','10','https://open.spotify.com/track/28R4h4KB4sGtwt4zrjsoxn')
+,(NULL,"Most of What I Like",'869780762','198','11','https://open.spotify.com/track/7MOJdA7TyI3hDa2qw2Co02')
+,(NULL,"Paper Mache",'869780762','150','12','https://open.spotify.com/track/6huiPRGBHBiCrESkff1dzs')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('154703825',"Quarters",'53951829','cover154703825.jpg','0','2015');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The River",'154703825','610','1','https://open.spotify.com/track/7p3V6QKXakAO8go0LhHFNP')
+,(NULL,"Infinite Rise",'154703825','610','2','https://open.spotify.com/track/3NzjXja79Sm8Snw71oHudy')
+,(NULL,"God Is in the Rhythm",'154703825','610','3','https://open.spotify.com/track/2z71mLm6Mr6dtAayvdlb6Y')
+,(NULL,"Lonely Steel Sheet Flyer",'154703825','610','4','https://open.spotify.com/track/2Q3es3ZBCefrXxWljj1xN0')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('934068517',"I'm in Your Mind Fuzz",'53951829','cover934068517.jpg','0','2014');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"I'm in Your Mind",'934068517','214','1','https://open.spotify.com/track/2TfB7tJRW0vKuRTxLZ1y3c')
+,(NULL,"I'm Not in Your Mind",'934068517','178','2','https://open.spotify.com/track/39KeSBQIobCv43n4cqSIf7')
+,(NULL,"Cellophane",'934068517','191','3','https://open.spotify.com/track/4DFhKx790EFTHQKyaPnjAW')
+,(NULL,"I'm in Your Mind Fuzz",'934068517','172','4','https://open.spotify.com/track/4wfruiILqtnieInPkMo9vK')
+,(NULL,"Empty",'934068517','251','5','https://open.spotify.com/track/2EjJ4c3Z38DSHySk78K7wn')
+,(NULL,"Hot Water",'934068517','204','6','https://open.spotify.com/track/613iy1AnNVNzDvZxpdzB7E')
+,(NULL,"Am I in Heaven",'934068517','426','7','https://open.spotify.com/track/5z1zIu1fT1cIxrZmm50plS')
+,(NULL,"Slow Jam 1",'934068517','175','8','https://open.spotify.com/track/0PZhWc0bkzlIELnyAOiLWX')
+,(NULL,"Satan Speeds Up",'934068517','219','9','https://open.spotify.com/track/3BQPuPma36AlLRWRFU6UWW')
+,(NULL,"Her & I (Slow Jam II)",'934068517','495','10','https://open.spotify.com/track/1E1OhRnPklFc9dfEPDcsiF')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('349707056',"Oddments",'53951829','cover349707056.jpg','0','2014');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Alluda Majaka",'349707056','214','1','https://open.spotify.com/track/03N0io094N0ZbVnFyti420')
+,(NULL,"Stressin'",'349707056','177','2','https://open.spotify.com/track/2Ap3ANRMsM3Ch2jko4vibi')
+,(NULL,"Vegemite",'349707056','165','3','https://open.spotify.com/track/1zmW3XD2ixkLyBRYJZ6om2')
+,(NULL,"It's Got Old",'349707056','179','4','https://open.spotify.com/track/0YQnb09IMU9NEuPv4gylb5')
+,(NULL,"Work This Time",'349707056','277','5','https://open.spotify.com/track/4VtNDouDk6gLgopBhp9di6')
+,(NULL,"ABABCd.",'349707056','17','6','https://open.spotify.com/track/6xTJ7tB09u0cxLE85qtG97')
+,(NULL,"Sleepwalker",'349707056','226','7','https://open.spotify.com/track/1z3btZfaunkWbhvIKBT8Oq')
+,(NULL,"Hot Wax",'349707056','209','8','https://open.spotify.com/track/6gVfpnD2z6Dvgvzy2mass1')
+,(NULL,"Crying",'349707056','177','9','https://open.spotify.com/track/0RWwVQQiBlo7qFc06hJugw')
+,(NULL,"Pipe-Dream",'349707056','62','10','https://open.spotify.com/track/5E42I00xcbwz3JIhgcJRtk')
+,(NULL,"Homeless Man In Addidas",'349707056','205','11','https://open.spotify.com/track/1auyRmyGLeESQWccYwBBgt')
+,(NULL,"Oddments",'349707056','25','12','https://open.spotify.com/track/415EjQiYVN8s8hFor1wd9T')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('778763218',"Float Along - Fill Your Lungs",'53951829','cover778763218.jpg','0','2013');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Head On/Pill",'778763218','961','1','https://open.spotify.com/track/1XylkHvQL5p3w8f7yuDgxu')
+,(NULL,"I'm Not a Man Unless I Have A Woman",'778763218','176','2','https://open.spotify.com/track/43h1g6Ax1YFl2uhcmNshze')
+,(NULL,"God Is Calling Me Back Home",'778763218','265','3','https://open.spotify.com/track/5uvTFzo9rzUK0iONFPpcKS')
+,(NULL,"30 Past 7",'778763218','224','4','https://open.spotify.com/track/70MVeVesmjh14dsusv1z3r')
+,(NULL,"Let Me Mend The Past",'778763218','150','5','https://open.spotify.com/track/10rnlvtGWQyxmnZ15WiqrJ')
+,(NULL,"Mystery Jack",'778763218','168','6','https://open.spotify.com/track/0BOvaBCtfvGsQp4Qw1gDkU')
+,(NULL,"Pop In My Step",'778763218','172','7','https://open.spotify.com/track/5AqNuMyfCetued4vOYQwV7')
+,(NULL,"Float Along  Fill Your Lungs",'778763218','406','8','https://open.spotify.com/track/3voUYCrBa3cAsOaByeaGKX')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('611352075',"Eyes Like The Sky",'53951829','cover611352075.jpg','0','2013');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Eyes Like The Sky",'611352075','197','1','https://open.spotify.com/track/3qzU4eW2OJMxLTtTWbye5a')
+,(NULL,"Year Of Our Lord",'611352075','177','2','https://open.spotify.com/track/7vYUZLXhYT3YhSOYjzrRdb')
+,(NULL,"The Raid",'611352075','144','3','https://open.spotify.com/track/3D9CiaM3IAFVbaUQKn3unW')
+,(NULL,"Drum Run",'611352075','162','4','https://open.spotify.com/track/1SdwAKWye6PFu1ZtSfLxJZ')
+,(NULL,"Evil Man",'611352075','234','5','https://open.spotify.com/track/08r6fo6vUmIrs5LPyYuUeQ')
+,(NULL,"Fort Whipple",'611352075','176','6','https://open.spotify.com/track/6O6BxzX8YuXzIuzt2BmSZR')
+,(NULL,"The God Man's Goat Lust",'611352075','197','7','https://open.spotify.com/track/3Bfwcbn5jWS3xSvENaBC7c')
+,(NULL,"The Killing Ground",'611352075','170','8','https://open.spotify.com/track/7fBsoTqBQqpITUfk5uiRyP')
+,(NULL,"Dust In The Wind",'611352075','144','9','https://open.spotify.com/track/4ioOmugd8hsQrLMONDh96o')
+,(NULL,"Guns & Horses",'611352075','68','10','https://open.spotify.com/track/6CR8EKKv6KSmojz05g7ay6')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('318641500',"12 Bar Bruise",'53951829','cover318641500.jpg','0','2012');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Elbow",'318641500','160','1','https://open.spotify.com/track/79ZRaVX9Cwhdhx6IB0eOQy')
+,(NULL,"Muckraker",'318641500','180','2','https://open.spotify.com/track/7M32JRrLz0fPAa034OJ28z')
+,(NULL,"Nein",'318641500','172','3','https://open.spotify.com/track/6tokr810BxsXw4mruao6og')
+,(NULL,"12 Bar Bruise",'318641500','227','4','https://open.spotify.com/track/3tXF5a6K8EHLTKKXYCaku1')
+,(NULL,"Garage Liddiard",'318641500','149','5','https://open.spotify.com/track/1y54vtYWUbRsNbOtbp3MZe')
+,(NULL,"Sam Cherry's Last Shot",'318641500','169','6','https://open.spotify.com/track/7atCGf0PqDBrEzU59lSQVV')
+,(NULL,"High Hopes Low",'318641500','226','7','https://open.spotify.com/track/0k84Cd9Np6jOFmKCZ6tXd1')
+,(NULL,"Cut Throat Boogie",'318641500','170','8','https://open.spotify.com/track/0WCAmvdFblrJ3XqfRcUJ8a')
+,(NULL,"Bloody Ripper",'318641500','133','9','https://open.spotify.com/track/6Kdg5ynUJXY589zV94jw5G')
+,(NULL,"Uh Oh I Called Mum",'318641500','158','10','https://open.spotify.com/track/32vPR3equ6MLlU8W0lMtRg')
+,(NULL,"Sea of Trees",'318641500','195','11','https://open.spotify.com/track/2fDQQhulS4EMgwyaDcC58r')
+,(NULL,"Footy Footy",'318641500','119','12','https://open.spotify.com/track/7oYkcWpb76NSCx0eU4yP1a')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('649884142',"Willoughby's Beach",'53951829','cover649884142.jpg','0','2011');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Danger $$$",'649884142','106','1','https://open.spotify.com/track/5xmHC8KcLvY1uxeizoWfww')
+,(NULL,"Black Tooth",'649884142','151','2','https://open.spotify.com/track/6PuyikqU5MDcv2Ayhxh62T')
+,(NULL,"Lunch Meat",'649884142','100','3','https://open.spotify.com/track/1tQVXhgbeWSwif6wnvBmmp')
+,(NULL,"Crookedile",'649884142','150','4','https://open.spotify.com/track/1rrHLi3nWVlIkJB6q1KVLo')
+,(NULL,"Let It Bleed",'649884142','194','5','https://open.spotify.com/track/4ieIZjr7tykWdjjpm2mWF9')
+,(NULL,"Dead-Beat",'649884142','182','6','https://open.spotify.com/track/2uKDAghzgweNp7lxhXwWbm')
+,(NULL,"Dustbin Fletcher",'649884142','189','7','https://open.spotify.com/track/4HEHv9ATEB7rEooQg6Ke4D')
+,(NULL,"Stoned Mullet",'649884142','131','8','https://open.spotify.com/track/0xDFZ2Pdv9rIyawaBl7Brq')
+,(NULL,"Willoughby's Beach",'649884142','174','9','https://open.spotify.com/track/6cIuzguIgsJvgyzaHW3qoU')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('945908131',"Kepler-22b",'53951829','cover945908131.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Kepler-22b",'945908131','193','1','https://open.spotify.com/track/4RpYwhok6EenNByjlMupsd')
+,(NULL,"Magenta Mountain",'945908131','365','2','https://open.spotify.com/track/2j1vlbJ2nmhYzRit8GCAJN')
+,(NULL,"The Dripping Tap",'945908131','1097','3','https://open.spotify.com/track/7xmmSQDp8xazrjMa1gTB8y')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('446889645',"Magenta Mountain",'53951829','cover446889645.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Magenta Mountain",'446889645','365','1','https://open.spotify.com/track/1mTZgUSvyG3I3O9onu3p5V')
+,(NULL,"The Dripping Tap",'446889645','1097','2','https://open.spotify.com/track/6XPynqyVHRViRk0jixkMYD')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('926020248',"Satanic Slumber Party",'53951829','cover926020248.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Satanic Slumber Party Part 1 (The Chairman's Portrait)",'926020248','54','1','https://open.spotify.com/track/61oNAfqaloxnP7mYDWIrtB')
+,(NULL,"Satanic Slumber Party Part 2 (Midnight In Sodom)",'926020248','343','2','https://open.spotify.com/track/1uMcy6dDlrQby1nD6xwKOw')
+,(NULL,"Satanic Slumber Party Part 3 (Hoof And Horn)",'926020248','734','3','https://open.spotify.com/track/4kXMWfMuSCWtDV0hPmg9QM')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('618926026',"The Dripping Tap",'53951829','cover618926026.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The Dripping Tap",'618926026','1097','1','https://open.spotify.com/track/3RJxtF4WDoxofuATWOI89r')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('546770979',"Black Hot Soup (DJ Shadow My Own Reality Re-Write)",'53951829','cover546770979.jpg','1','2022');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Black Hot Soup - DJ Shadow My Own Reality Re-Write",'546770979','216','1','https://open.spotify.com/track/4dXsEEQarPsh8udGfRUE30')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('367047525',"Neu Butterfly 3000",'53951829','cover367047525.jpg','1','2021');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Neu Butterfly 3000 - Peaches Remix",'367047525','345','1','https://open.spotify.com/track/1s8Qs7yFYvnpQR2zsPUyXe')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('262447205',"Shanghai (Dub by The Scientist)",'53951829','cover262447205.jpg','1','2021');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Shanghai - The Scientist Dub",'262447205','241','1','https://open.spotify.com/track/4r2rTbmRKqesrbrFiDWCVf')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('808178581',"The Lord of Lightning",'53951829','cover808178581.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The Lord of Lightning",'808178581','307','1','https://open.spotify.com/track/0zrJFGpPx5pJ2OVWlecazD')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('862141217',"Digital Black",'53951829','cover862141217.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Digital Black",'862141217','167','1','https://open.spotify.com/track/4vH1X2IUbW4XdHs4rgQPIq')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('144015687',"Han-Tyumi, the Confused Cyborg",'53951829','cover144015687.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Han-Tyumi, the Confused Cyborg",'144015687','142','1','https://open.spotify.com/track/37b1wjsYniMzOQMEYgWhm6')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('933199985',"Murder of the Universe",'53951829','cover933199985.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Murder of the Universe",'933199985','250','1','https://open.spotify.com/track/3MGJjCNn49Enw9bsJANgle')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('633457512',"Soy- Protein Munt Machine",'53951829','cover633457512.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Soy-Protein Munt Machine",'633457512','30','1','https://open.spotify.com/track/2oXnAk9D1tOJyg9FvZb0Kf')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('748090580',"Vomit Coffin",'53951829','cover748090580.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Vomit Coffin",'748090580','139','1','https://open.spotify.com/track/5qTyoQnHjEnquEZWzf1zI8')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('114104380',"Welcome to an Altered Universe",'53951829','cover114104380.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Welcome to an Altered Future",'114104380','55','1','https://open.spotify.com/track/2gzugEiclAb9Qbe162vWNh')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('433689859',"Sleep Drifter",'53951829','cover433689859.jpg','1','2017');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Sleep Drifter",'433689859','285','1','https://open.spotify.com/track/3vUMlWlOfrcemEdOoDhK2Y')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('814188830',"Nuclear Fusion",'53951829','cover814188830.jpg','1','2016');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Nuclear Fusion",'814188830','255','1','https://open.spotify.com/track/16cTusq5QsMMk997bOF4pj')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('868360404',"Rattlesnake",'53951829','cover868360404.jpg','1','2016');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Rattlesnake",'868360404','468','1','https://open.spotify.com/track/3x2hmO6YwvNOqfyx4LKTL4')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('384137036',"People-Vultures",'53951829','cover384137036.jpg','1','2016');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"People-Vultures",'384137036','300','1','https://open.spotify.com/track/4MvHeuPX1kK1SrqrI6vUI4')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('340364234',"Gamma Knife",'53951829','cover340364234.jpg','1','2016');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Gamma Knife",'340364234','261','1','https://open.spotify.com/track/31bdcmHTPs0XQsWvroAmH2')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('745133811',"Trapdoor",'53951829','cover745133811.jpg','1','2015');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Trapdoor",'745133811','159','1','https://open.spotify.com/track/4DZobhDABFMgGD4ElTvOHZ')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('107205883',"Paper Mache Dream Balloon",'53951829','cover107205883.jpg','1','2015');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Paper Mache Dream Balloon",'107205883','160','1','https://open.spotify.com/track/0Kcz6xm4Qsjm9EBiGL6mpe')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('56236289',"The River",'53951829','cover56236289.jpg','1','2015');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"The River",'56236289','610','1','https://open.spotify.com/track/3FLIeqNkKoBgb5iVu9oLdt')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('131777802',"Cellophane",'53951829','cover131777802.jpg','1','2014');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Cellophane",'131777802','191','1','https://open.spotify.com/track/3dAiTuNK4n7tQkRlc3i8ri')
+,(NULL,"The Wholly Ghost",'131777802','193','2','https://open.spotify.com/track/4a0dAvhfcPu2afQGZQxFDm')
+;
+INSERT INTO `bands` (`id`, `name`, `info`, `photo`) VALUES('92711823','Ozma','Ozma is an American rock band from Pasadena, California','band92711823.jpg');
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('614039737',"The Doubble Donkey Disc",'92711823','cover614039737.jpg','0','2019');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Flight of Yuri Gagarin",'614039737','144','1','https://open.spotify.com/track/6nkoZfO0Tz4enOLtKTu7NA')
+,(NULL,"No One Needs to Know",'614039737','247','2','https://open.spotify.com/track/5SDKanJ3PbeL5Z1tLMMRL5')
+,(NULL,"Korobeiniki (Tetris Theme)",'614039737','139','3','https://open.spotify.com/track/34Iz2YaDtsHzcxKcFYywnz')
+,(NULL,"You Know the Story",'614039737','200','4','https://open.spotify.com/track/06OYIgXq4aJ5r7ro7Rn7aW')
+,(NULL,"Landing of Yuri Gagarin",'614039737','185','5','https://open.spotify.com/track/01lAs1Te6kJcj2cwvTeLIw')
+,(NULL,"The Business of Getting Down",'614039737','297','6','https://open.spotify.com/track/0qga64NYjkbYz3l1XmlqxN')
+,(NULL,"Maybe in an Alternate Dimension",'614039737','291','7','https://open.spotify.com/track/7eZIqV0d5AvOTRstekKXfJ')
+,(NULL,"Immigration Song",'614039737','299','8','https://open.spotify.com/track/1EIWHZ5DNnEOxdy49Wku67')
+,(NULL,"Flight of the Bootymaster",'614039737','258','9','https://open.spotify.com/track/3GWG78RDYW9QSelg2yAPI9')
+,(NULL,"Continental Drift",'614039737','348','10','https://open.spotify.com/track/32TDKSPJWiYOB681ElPb1W')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('465845433',"Boomtown",'92711823','cover465845433.jpg','0','2014');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Around the World in 80 Seconds",'465845433','140','1','https://open.spotify.com/track/79A346lZcylKQYL20uZfmm')
+,(NULL,"Nervous",'465845433','179','2','https://open.spotify.com/track/5faWRnBWA6cDl4VgOH6Hbx')
+,(NULL,"You'd Think I'd Know",'465845433','192','3','https://open.spotify.com/track/70QtX08lHBF2X5mFrrQknk')
+,(NULL,"Girlfriend You're the One",'465845433','225','4','https://open.spotify.com/track/74PHjJNqYULj7z44OjGBoU')
+,(NULL,"One Wish",'465845433','202','5','https://open.spotify.com/track/3qdxABNfbhGrmfetgUlN7F')
+,(NULL,"Suicide Song",'465845433','197','6','https://open.spotify.com/track/2d7dq6SggObq2SMA3uzx0Q')
+,(NULL,"Tree Snake Son",'465845433','242','7','https://open.spotify.com/track/7r2hjS5arMTAZf1eUBnuGN')
+,(NULL,"Blue Love",'465845433','115','8','https://open.spotify.com/track/1zHCClpVgw23y6lxsMx13I')
+,(NULL,"Out the Window",'465845433','213','9','https://open.spotify.com/track/6caYTbekQGuB3QgjVxf9l6')
+,(NULL,"Boomtown",'465845433','234','10','https://open.spotify.com/track/0pHMGxSzHXGmvZ5RN1HNSV')
+,(NULL,"Never Know",'465845433','314','11','https://open.spotify.com/track/5ESCA19hmVIshXqssRe7hO')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('660242659',"Pasadena",'92711823','cover660242659.jpg','0','2007');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"No One Needs to Know",'660242659','216','1','https://open.spotify.com/track/4H8jzfiaXkvzcwckclhbot')
+,(NULL,"Barriers",'660242659','186','2','https://open.spotify.com/track/2D5LwCQzi2y0vxshCTr0BW')
+,(NULL,"Eponine",'660242659','199','3','https://open.spotify.com/track/7v8fwJQjjkmXWunvILSw6h')
+,(NULL,"Fight the Darkness",'660242659','179','4','https://open.spotify.com/track/7dxOmzgHdd5ubfJ8xGGtIk')
+,(NULL,"Heartache vs Heartbreak",'660242659','214','5','https://open.spotify.com/track/5Dq04DVo1rAWvZ8Gu6VoYU')
+,(NULL,"Incarnation Blues",'660242659','144','6','https://open.spotify.com/track/2DBxQPljYV1J1QdfEYlMKU')
+,(NULL,"Lunchbreak (Cobras Theme)",'660242659','218','7','https://open.spotify.com/track/4fRnveBEWLlskT93AwGx1k')
+,(NULL,"Motorology 3:39",'660242659','252','8','https://open.spotify.com/track/2xV11hUwpjvCh6cZ2P5UP4')
+,(NULL,"I Wonder",'660242659','176','9','https://open.spotify.com/track/1R0hWtmeGvsS3pnPJsSk06')
+,(NULL,"Underneath My Tree",'660242659','195','10','https://open.spotify.com/track/7CJSUQCXOPVWi0hsmQ8ikl')
+,(NULL,"Straight Flush",'660242659','236','11','https://open.spotify.com/track/1QtKslPa6W44ULgZp8pEqi')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('76645148',"Spending Time On The Border Line",'92711823','cover76645148.jpg','0','2003');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Spending Time",'76645148','241','1','https://open.spotify.com/track/2vLyguiSnHaUge9lfEUPWu')
+,(NULL,"Your Name",'76645148','151','2','https://open.spotify.com/track/11cecAOTlJqq5oCQTQoELW')
+,(NULL,"Come Home Andrea",'76645148','239','3','https://open.spotify.com/track/2wqRSjtH4UM9LyfKMPRaHG')
+,(NULL,"Bad Dogs",'76645148','186','4','https://open.spotify.com/track/0sz88lKfmi4FJHA0a4dZT4')
+,(NULL,"Utsukushii Shibuya",'76645148','298','5','https://open.spotify.com/track/2hQ6i7d2Fo0bsLxpWBcQIq')
+,(NULL,"Turtleneck Coverup",'76645148','225','6','https://open.spotify.com/track/2G82vCSPAuO4mdkSgYi1nA')
+,(NULL,"Gameover",'76645148','253','7','https://open.spotify.com/track/7IjA7m8x9XsXDR2XrF6iQ8')
+,(NULL,"Curve In The Old 1-9",'76645148','231','8','https://open.spotify.com/track/6IG1RdwFyFblnG1J9xzL0o')
+,(NULL,"Restart",'76645148','301','9','https://open.spotify.com/track/5TCyjmgW3McmBzpPBr0Vbo')
+,(NULL,"Eponine",'76645148','254','10','https://open.spotify.com/track/5jkMpvaBdpZQI6ErVmsOFs')
+,(NULL,"Wake Up",'76645148','222','11','https://open.spotify.com/track/627khtFv1QhLIaSBeJaeJ5')
+,(NULL,"Light Years Will Burn",'76645148','384','12','https://open.spotify.com/track/5KtiJaalCp6NtxRWpBjOdl')
+;
+INSERT INTO `albums` (`id`, `name`, `band_id`, `cover`, `single`,`releaseyear`) VALUES('384772529',"Rock And Roll Part Three",'92711823','cover384772529.jpg','0','2001');
+            INSERT INTO `songs` (`id`, `name`, `album_id`, `lenght`, `order`, `spotify_link`) VALUES(NULL,"Domino Effect",'384772529','211','1','https://open.spotify.com/track/2sP9xWHWtUGGB83ED4UiqQ')
+,(NULL,"Apple Trees",'384772529','203','2','https://open.spotify.com/track/7g39q2tMDSUeX3yHv81gMC')
+,(NULL,"Shooting Stars",'384772529','248','3','https://open.spotify.com/track/6kfUvtmCHiMnQQ6OHr2DYE')
+,(NULL,"Natalie Portman",'384772529','229','4','https://open.spotify.com/track/4wUJ0KmrDlh9p3Y64jVKRm')
+,(NULL,"The Ups And Downs",'384772529','171','5','https://open.spotify.com/track/3jCFomDdLdcxp8CktvprnA')
+,(NULL,"If I Only Had A Heart",'384772529','194','6','https://open.spotify.com/track/5U2TVfrbNFi2cYih0qe3z9')
+,(NULL,"Baseball",'384772529','335','7','https://open.spotify.com/track/3nAKZQcvnFBPNIZlRirCSK')
+,(NULL,"Rocks",'384772529','118','8','https://open.spotify.com/track/6MzesWm89CeaJsoIFunb9k')
+,(NULL,"Battlescars",'384772529','518','9','https://open.spotify.com/track/7slAGFo4C0RlFo1CAT36b0')
+,(NULL,"In Search Of 1988",'384772529','266','10','https://open.spotify.com/track/2egv4ssPUftHjbujbzKczm')
+,(NULL,"Last Dance",'384772529','238','11','https://open.spotify.com/track/6HWPoZqorCptSAgRpjZEOD')
 ;
