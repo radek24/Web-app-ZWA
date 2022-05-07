@@ -1,21 +1,45 @@
 <?php
-$title = "Rater - ".$row["albname"];
+$title = "Rater - " . $row["albname"];
 require("./view/head.phtml");
-require("./phpFunc/utils.php")
+require("./phpFunc/utils.php");
 
 ?>
 <style>
-  .band-container{
-    background: linear-gradient(hsla(<?php echo getColorFromID($row["albid"])?>, 77%, 51%, 0.525), #00000000); 
-}
-
+    .band-container {
+        background: linear-gradient(hsla(<?php echo getColorFromID($row["albid"]) ?>, 77%, 51%, 0.525), #00000000);
+    }
 </style>
+
+<script>
+    function searchq(id_sng, order) {
+
+
+        var tmp = [];
+        $("input[name='rating']").each(function() {
+            tmp.push($(this).val());
+        });
+        rating_js = tmp[parseInt(order)-1]
+
+        var user = $("input[name='userID']").val();
+        var song = id_sng;
+        $.post("addRating.php", {
+            rating: rating_js,
+            userid: user,
+            songid: song,
+        }, function(output) {
+            $("#output").html(output);
+        });
+
+    }
+</script>
+
+
 <div class="band-container">
     <div class="container pt-5 ">
 
         <h1 class="display-2" style="font-weight: bold; padding-top:10%"><?php echo $row["albname"] ?></h1>
         <div class="text-muted">
-            <h5><a href="<?php echo "band.php?band=".$row["bndid"] ?>"><?php echo $row["name"]. "</a> • ". $row["yr"]." • " . $row["songCnt"] ." SONGS • ". round($row["lenght"] /60)." min"?> </h5>
+            <h5><a href="<?php echo "band.php?band=" . $row["bndid"] ?>"><?php echo $row["name"] . "</a> • " . $row["yr"] . " • " . $row["songCnt"] . " SONGS • " . round($row["lenght"] / 60) . " min" ?> </h5>
         </div>
     </div>
 
@@ -25,12 +49,17 @@ require("./phpFunc/utils.php")
 
 
     </div><?php
- $result_alb = returnsongs($db, $row["albid"]);
- while ($rowsng = mysqli_fetch_array($result_alb, MYSQLI_ASSOC)) {
-    require("./view/songCard.phtml");
-}
-?>
- </div>
+            $result_alb = returnsongs($db, $row["albid"]);
+            while ($rowsng = mysqli_fetch_array($result_alb, MYSQLI_ASSOC)) {
+               if(isset($_SESSION["user"])){
+                $ratinginfo  = tryFindRatingFromUser($db, $_SESSION["user"]["id"],$rowsng["id"]);
+               }
+                
+                //var_dump($ratinginfo);
+                require("./view/songCard.phtml");
+            }
+            ?>
+</div>
 </div>
 </div>
 <?php

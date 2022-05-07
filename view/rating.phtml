@@ -1,0 +1,4 @@
+<form style="display:inline;width:50px;" method="post">
+    <input <?php echo 'onchange="searchq(' . $rowsng["id"] . ',' . $rowsng["order"] . ');"' ?> id="input-1" name="rating" class=" rating rating-loading" style="display:none !important;" data-min="0" data-max="5" data-step="0.5" <?php echo 'value = "' . $ratingval  . '"' ?>>
+    <input type="hidden" name="userID" value="<?php echo $_SESSION["user"]["id"] ?>">
+</form>

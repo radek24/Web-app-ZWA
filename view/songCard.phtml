@@ -1,3 +1,13 @@
+<?php
+  if( isset($_SESSION["user"])){
+if ($ratinginfo != NULL) {
+    $ratingid = $ratinginfo[0];
+    $ratingval = round(intval($ratinginfo[3])/2.0,2);
+} else {
+    $ratingid = 0;
+    $ratingval = 0;
+}}
+?>
 <div class="song card my-4 ">
     <div class="card-body">
         <div class="row">
@@ -6,20 +16,26 @@
                     <?php echo $rowsng["order"]; ?>.
                 </h6>
             </div>
-            <div class="col-5 text-left" >
+            <div class="col-5 text-left">
 
                 <h5 class="d-inline"><?php echo $rowsng["name"]; ?></h5>
                 <br>
                 <p class="   text-muted"><?php echo secsToMins($rowsng["lenght"]) ?></p>
             </div>
             <div class="col">
-                <p class="   text-muted d-inline">AVG Rating:&nbsp;<span class="text-success">4.75</span>/5</p>
+                <p class="   text-muted d-inline"><?php echo returnAverageRating($db, $rowsng["id"]) ?></p>
             </div>
             <div class="col-3">
-                <form style="display:inline;width:50px;" method="post">
-                    <input id="input-1" name="" class=" rating rating-loading" style="display:none !important;" data-min="0" data-max="5" data-step="1" value="0">
-                </form>
+            <?php
+            if( isset($_SESSION["user"])){
+                require("./view/rating.phtml");
+            }else{
+                echo '<strong >Log in to rate this song!</strong>';
+            }
+            
+            ?>
             </div>
+           
             <div class="col">
                 <button onClick="location.href='<?php echo $rowsng["spotify_link"] ?>'" type="button" class="  btn btn-success  d-inline float-right mr-3" style="background-color:#1DB954; border:none">Listen on Spotify!</button>
             </div>
