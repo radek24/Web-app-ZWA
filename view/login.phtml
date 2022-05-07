@@ -33,6 +33,13 @@ footer{
 <div class="login-form" style="padding-top:15%;">
     <form method="post">
         <h2 class="text-center">Log in</h2>
+        <?php
+        if (isset($chyba)){
+            echo '<p class="text-center text-danger">'.$chyba.'<p>';
+
+        }
+       
+        ?>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Email" required="required" name="email">
         </div>

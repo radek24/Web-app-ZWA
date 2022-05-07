@@ -46,7 +46,7 @@
       </ul>
       <?php
       if (isset($_SESSION["user"])) {
-        echo '<img src="Img/Bands/DefaultBand.png" style="padding-right:25px"  height="50"><h2 style="	font-weight: lighter; padding-right:50px;">' . $_SESSION["user"]["name"] . "<h2>";
+        echo '<h3 style="	font-weight: lighter;">' . $_SESSION["user"]["name"] . "</h3> ".'<button type="button" class=" mx-4 btn btn-primary"   onClick="location.href=\' logout.php \'" >   Logout  </button>';
       } else {
         echo '
     
