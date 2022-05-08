@@ -15,6 +15,7 @@ function login($db, $userdata) {
     }
     if ($user) { 
         $_SESSION["user"] = $user;
+        
         header("Location: index.php");
         exit;
     }
@@ -34,9 +35,9 @@ function create_account($db, $userdata){
 $sql = 
 "INSERT INTO `users`  (`name`,`email`,`password`) VALUES ('{$userdata["username"]}','{$userdata["email"]}', '" . sha1($userdata["password"]) . "')
 ";
-
+$_SESSION["msg"] = "<p class=\" text-success text-center\">Account succesfully created, you can now log in<p>";
 mysqli_query($db, $sql);
-header("Location: index.php");
+header("Location: login.php");
 exit;
 }
 function banuser($db, $usrid){
