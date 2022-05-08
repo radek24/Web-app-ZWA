@@ -6,6 +6,7 @@
         <div class="col-auto">
             <input style="width:900px" type="text" id="comment" class="form-control" name="comment" required>
             <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"] ?>">
+            <input type="hidden" name="albid" value="<?php echo $row["albid"] ?>">
         </div>
         <div class="col-auto">
             <input type="submit" value="Comment">

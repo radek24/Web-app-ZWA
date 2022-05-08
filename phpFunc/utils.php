@@ -140,12 +140,44 @@ function addComment($db, $commentdata,$albumid){
 
 function getComments($db,$albumID){
     $sql = "
-    SELECT comments.albumcomment as comment, users.name as usrnm,comments.createdT as time
+    SELECT comments.albumcomment as comment, users.name as usrnm,comments.createdT as time,users.id as usrid, comments.id as cmid
     FROM comments
     JOIN users
     ON users.id = comments.userid
     WHERE albumid = $albumID
+    ORDER BY time DESC
     ";
     return mysqli_query($db,$sql);
+}
+function deleteComments($db,$cmid,$albumid,$usrid,$admin){
+if ($admin == 0){
+    $sql = 
+    "
+    DELETE FROM
+    comments
+    WHERE comments.id = $cmid AND comments.userid = $usrid
+    ";
+
+}else{
+    $sql = 
+    "
+    DELETE FROM
+    comments
+    WHERE comments.id = $cmid
+    ";
+
+}
+    
+mysqli_query($db,$sql);
+header("Location: album.php?album=".$albumid);
+    exit;
+}
+function getUsers($db){
+    $sql = "
+    SELECT *
+    FROM users
+    ";
+
+return mysqli_query($db,$sql);
 }
 ?>

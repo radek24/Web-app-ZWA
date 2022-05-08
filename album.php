@@ -2,10 +2,17 @@
     session_start();
     require_once("phpFunc/DB_connect.php");
     require("./phpFunc/utils.php");
+if (isset($_SESSION["user"])){
+if(isset($_GET["deletecom"])){
+        deleteComments($db,$_GET["deletecom"],$_SESSION["curralb"],$_SESSION["user"]["id"], $_SESSION["user"]["admin"]);
+        exit;
+    }
 
-  
- 
 
+}
+    
+    
+    $_SESSION["curralb"] = $_GET["album"];
     $band = $_GET["album"];
     $sql = 'SELECT DISTINCT albums.id as albid, albums.name as albname, COUNT(songs.id) as songCnt, bands.name,SUM(songs.lenght) as lenght,bands.id as bndid, albums.releaseyear as yr
 	FROM albums
@@ -32,7 +39,3 @@
     if(isset($_POST["comment"])){
         addComment($db,$_POST, $_GET["album"]);
     }
-
-    
-    ?>
-    

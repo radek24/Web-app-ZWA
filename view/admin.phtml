@@ -1,9 +1,4 @@
-<style>
-  * {
-    font-family: "Comic Sans MS" !important;
-    
-  }
-</style>
+
 <h1 class="px-5" style="padding-top:7%">Admin </h1>
 <h6 class="text-muted px-5">(please do not sql inject :) )</h6>
 <h2 class="px-5 pt-3">Add band</h2>
@@ -35,6 +30,46 @@
     </div>
   </div>
 </form>
+
+<h2 class="px-5 pt-5">UsersTable</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Admin</th>
+      <th scope="col">Ban</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+<?php
+  echo "<tbody>";
+  $users = getUsers($db);
+  foreach ($users as $user) {
+      if ($user["archived"]== 0){
+$neco = "<a href='?banusr={$user["id"]}'>BAN</a>";
+      }else{
+        $neco = "<a href='?unbanusr={$user["id"]}'>UNBAN</a>";
+      }
+    
+    echo "<tr>
+      <th scope=\"row\">{$user["id"]}</th>
+      <td>{$user["name"]}</td>
+      <td>{$user["email"]}</td>
+      <td>{$user["admin"]}</td>
+      <td>{$user["archived"]}</td>
+      <td>".  $neco.
+      
+      "</td>
+    </tr>";
+  
+  }
+  echo "</tbody></table>";
+?>
+
+
+  
 
 
 </div>

@@ -9,7 +9,10 @@ function login($db, $userdata) {
 
     $result = mysqli_query($db, $sql);
     $user = mysqli_fetch_assoc($result);
-
+    if ($user["archived"]==1){
+        $error = "Account banned";
+        return $error;
+    }
     if ($user) { 
         $_SESSION["user"] = $user;
         header("Location: index.php");
@@ -36,3 +39,23 @@ mysqli_query($db, $sql);
 header("Location: index.php");
 exit;
 }
+function banuser($db, $usrid){
+
+$sql = "UPDATE users
+SET archived = 1
+WHERE users.id = $usrid;
+
+";
+mysqli_query($db, $sql);
+header("Location: admin.php");
+}
+function unbanuser($db, $usrid){
+
+    $sql = "UPDATE users
+    SET archived = 0
+    WHERE users.id = $usrid;
+    
+    ";
+    mysqli_query($db, $sql);
+    header("Location: admin.php");
+    }

@@ -6,7 +6,7 @@
                 <div class="col-md-2" style="padding-left:0">
                     <img class="img-fluid rounded " src="<?php echo returnCoverPath($row["albcvr"]) ?>">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h3><?php echo $row["albnm"] ?></h3>
                     <h6 class="card-subtitle mb-1 pt-1"><span class="badge bg-dark">
                             <?php echo $row["singl"] == 0 ? "Album" : "Single"; ?>
@@ -15,7 +15,7 @@
                     <br>
                     <h5 class="pt-2"><a><?php echo $row['bndname'] ?> </a> </h5>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <h5 class="text-muted pt-3 font-weight-light">Rated <?php echo $row['rcount'] ?> times</h5>
                     <h4 class="text-muted">Average rating</h4>
 
