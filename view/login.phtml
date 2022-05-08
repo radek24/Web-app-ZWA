@@ -24,21 +24,20 @@
     .btn {
         font-size: 15px;
     }
-footer{
-    display: none !important;
-}
 
+    footer {
+        display: none !important;
+    }
 </style>
 
 <div class="login-form" style="padding-top:15%;">
     <form method="post">
         <h2 class="text-center">Log in</h2>
         <?php
-        if (isset($chyba)){
-            echo '<p class="text-center text-danger">'.$chyba.'<p>';
-
+        if (isset($chyba)) {
+            echo '<p class="text-center text-danger">' . $chyba . '<p>';
         }
-       
+
         ?>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Email" required="required" name="email">
@@ -50,8 +49,27 @@ footer{
             <button type="submit" class="btn btn-primary btn-block">Log in</button>
         </div>
         <div class="clearfix">
-            <a href="#" class="pull-right">Forgot Password?</a>
+            <a href="#" class="pull-right" data-toggle="modal" data-target="#exampleModal">Forgot Password?</a>
         </div>
     </form>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tak to je blbé</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="Img/trollface.jpg" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Založím si nový účet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <p class="text-center"><a href="signup.php">Create an Account</a></p>
 </div>
