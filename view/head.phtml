@@ -31,9 +31,17 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link mx-5 " href="browse.php" style="color:#FFBB0D !important;">Browse</a>
-        </li>
+        <li class="nav-item dropdown mx-5">
+        <a style="color:#FFBB0D !important;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Browse
+        </a>
+        <div class="dropdown-menu" style="color:#FFBB0D !important;" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="color:#FFBB0D !important;" href="browse.php">Most rated</a>
+          <a class="dropdown-item"  style="color:#FFBB0D !important;" href="browseComm.php">Most comented</a>
+          <a class="dropdown-item"  style="color:#FFBB0D !important;" href="browseBest.php">Best rated</a>
+        </div>
+      </li>
+
 
         <li class="nav-item active">
           <a class="nav-link mx-5 " href="find.php" style="color:#FFBB0D !important;">Find</a>

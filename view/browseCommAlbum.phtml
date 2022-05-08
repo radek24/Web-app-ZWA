@@ -1,0 +1,28 @@
+<div class="album card my-4" onClick="location.href='album.php?album=<?php echo $row["albid"] ?>'">
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-2" style="padding-left:0">
+                    <img class="img-fluid rounded " src="<?php echo returnCoverPath($row["albcvr"]) ?>">
+                </div>
+                <div class="col-md-8">
+                    <h3><?php echo $row["albnm"] ?></h3>
+                    <h6 class="card-subtitle mb-1 pt-1"><span class="badge bg-dark">
+                            <?php echo $row["singl"] == 0 ? "Album" : "Single"; ?>
+                        </span></h6>
+                    <h6 class="pt-2 text-muted"><?php echo $row['rls'] ?></h6>
+                    <br>
+                    <h5 class="pt-2"><a><?php echo $row['bndname'] ?> </a> </h5>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="text-muted pt-3 font-weight-light"> <?php echo $row['comcount'] ?> comments</h5>
+                    <h4 class="text-muted">Average rating</h4>
+
+                    <h2><?php echo returnAverageAlbumRating($db,$row["albid"]) ?></h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

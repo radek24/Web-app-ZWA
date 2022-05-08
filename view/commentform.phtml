@@ -4,7 +4,7 @@
             <label for="comment" class="col-form-label">Add comment</label>
         </div>
         <div class="col-auto">
-            <input style="width:900px" type="text" id="comment" class="form-control" name="comment" required>
+        <textarea rows="4" cols="50" type="textarea" class="form-control" id="comment" name="comment" placeholder="Limit for your comment is 1024 chars" required="required" style="width: 900px;"></textarea>
             <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"] ?>">
             <input type="hidden" name="albid" value="<?php echo $row["albid"] ?>">
         </div>
@@ -13,3 +13,7 @@
         </div>
     </div>
 </form>
+
+
+
+

@@ -123,9 +123,44 @@ GROUP BY albnm
 ORDER BY COUNT(ratings.rating) DESC
 
 ';
+
 return  mysqli_query($db,$sql);
 
 }
+function returnBestRatedAlbums($db){
+    $sql ='
+    SELECT albums.name as albnm, count(ratings.rating) as rcount, albums.cover as albcvr, albums.single as singl,albums.band_id as bndid,albums.id as albid,albums.releaseyear as rls, bands.name as bndname
+    FROM albums
+    JOIN songs
+    ON songs.album_id = albums.id
+    JOIN ratings
+    ON songs.id = ratings.songid
+    JOIN bands
+    ON bands.id = albums.band_id 
+    GROUP BY albnm
+    ORDER BY AVG(ratings.rating) DESC
+    
+    ';
+    
+    return  mysqli_query($db,$sql);
+    
+    }
+
+function returnMostCommentedAlbums($db){
+    $sql ='
+    SELECT albums.name as albnm, count(comments.id) as comcount, albums.cover as albcvr, albums.single as singl,albums.band_id as bndid,albums.id as albid,albums.releaseyear as rls, bands.name as bndname
+    FROM albums
+    JOIN comments
+    ON albums.id = comments.albumid
+    JOIN bands
+    ON bands.id = albums.band_id 
+    GROUP BY albnm
+    ORDER BY COUNT(comments.id) DESC
+    
+    ';
+    return  mysqli_query($db,$sql);
+    
+    }
 function addComment($db, $commentdata,$albumid){
     $hacker =  htmlspecialchars($commentdata["comment"], ENT_QUOTES, 'UTF-8');
     $sql = "
