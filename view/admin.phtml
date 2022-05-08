@@ -38,9 +38,12 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
+      <th scope="col">Ratings</th>
+      <th scope="col">Comments</th>
       <th scope="col">Admin</th>
       <th scope="col">Ban</th>
       <th scope="col">Action</th>
+      
     </tr>
   </thead>
 <?php
@@ -48,15 +51,17 @@
   $users = getUsers($db);
   foreach ($users as $user) {
       if ($user["archived"]== 0){
-$neco = "<a href='?banusr={$user["id"]}'>BAN</a>";
+        $neco = "<a class=\"text-danger\" href='?banusr={$user["id"]}'>BAN</a>";
       }else{
-        $neco = "<a href='?unbanusr={$user["id"]}'>UNBAN</a>";
+        $neco = "<a class=\"text-warning\" href='?unbanusr={$user["id"]}'>UNBAN</a>";
       }
-    
+    $rate = getuserRatings($db,$user["id"]);
     echo "<tr>
       <th scope=\"row\">{$user["id"]}</th>
       <td>{$user["name"]}</td>
       <td>{$user["email"]}</td>
+      <td>{$rate}</td>
+      <td>{$user["comms"]}</td>
       <td>{$user["admin"]}</td>
       <td>{$user["archived"]}</td>
       <td>".  $neco.
@@ -67,9 +72,38 @@ $neco = "<a href='?banusr={$user["id"]}'>BAN</a>";
   }
   echo "</tbody></table>";
 ?>
+<h2 class="px-5 pt-5">Comments Table</h2>
+<table class="table">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Contents</th>
+      <th scope="col">Album</th>
+      <th scope="col">Time</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
 
+  <?php
 
+  $comments = getAllComments($db);
+  foreach ($comments as $comment)
+  echo "<tr>
+  <th scope=\"row\">{$comment["cmid"]}</th>
+  <td>{$comment["usrnm"]}</td>
+  <td>{$comment["comment"]}</td>
+  <td><a href=\" album.php?album= {$comment["albid"]}\">{$comment["albnm"]}</a></td>
+  <td>{$comment["time"]}</td>
+  <td><a href=\"?deletecom={$comment["cmid"]}\" class=\"text-danger align-middle\">Delete</a> </td>
+
+</tr>";
   
-
+  
+  
+  ?>
+  
+</tbody></table>
 
 </div>

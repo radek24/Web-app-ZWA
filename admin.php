@@ -22,6 +22,10 @@ if(isset($_GET["unbanusr"])){
   unbanuser($db,$_GET["unbanusr"]);
   exit;
 }
+if(isset($_GET["deletecom"])){
+  deleteCommentUnsafe($db,$_GET["deletecom"]);
+  exit;
+}
 
   if (isset($_FILES["photo"])) {
     if (isset($_POST["name"])) {
