@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("phpFunc/DB_connect.php");
     require("./phpFunc/utils.php");
 
