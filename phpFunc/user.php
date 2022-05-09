@@ -1,18 +1,29 @@
 <?php
 function login($db, $userdata) {
-    $sql = 
+    $sql =  
     "SELECT *
-     FROM users
-     WHERE email = '{$userdata["email"]}' 
-       AND password = '" . sha1($userdata["password"]) . "'
-    ";
+    FROM users
+    WHERE email = ?
+      AND password = SHA1(?)
+   ";
 
-    $result = mysqli_query($db, $sql);
+    if ($stmt = mysqli_prepare($db, $sql)) {
+
+        mysqli_stmt_bind_param($stmt, "ss",  $userdata["email"], $userdata["password"]);
+
+        if (mysqli_stmt_execute($stmt)) {
+            $result = mysqli_stmt_get_result($stmt);
+            }
+        }
+    
     $user = mysqli_fetch_assoc($result);
+    
+    
     if ($user["archived"]==1){
         $error = "Account banned";
         return $error;
     }
+
     if ($user) { 
         $_SESSION["user"] = $user;
         
@@ -32,14 +43,26 @@ function logoff(){
     exit;
 }
 function create_account($db, $userdata){
-$sql = 
-"INSERT INTO `users`  (`name`,`email`,`password`) VALUES ('{$userdata["username"]}','{$userdata["email"]}', '" . sha1($userdata["password"]) . "')
+
+    $sql = 
+"INSERT INTO `users`  (`name`,`email`,`password`) VALUES ( ? , ? , ? )
 ";
+
+    if ($stmt = mysqli_prepare($db, $sql)) {
+        $tmp =sha1($userdata["password"]);
+        mysqli_stmt_bind_param($stmt, "sss",  $userdata["username"], $userdata["email"],$tmp);
+
+        if (mysqli_stmt_execute($stmt)) {
+            $result = mysqli_stmt_get_result($stmt);
+            }
+        }   
+
+
 $_SESSION["msg"] = "<p class=\" text-success text-center\">Account succesfully created, you can now log in<p>";
-mysqli_query($db, $sql);
 header("Location: login.php");
 exit;
 }
+
 function banuser($db, $usrid){
 
 $sql = "UPDATE users

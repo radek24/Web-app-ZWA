@@ -168,12 +168,24 @@ function returnMostCommentedAlbums($db)
 function addComment($db, $commentdata, $albumid)
 {
     $hacker =  htmlspecialchars($commentdata["comment"], ENT_QUOTES, 'UTF-8');
+    
+    
+    
     $sql =
-        "INSERT INTO comments (albumid,userid,albumcomment)
-    VALUES ('$albumid', '{$commentdata["userid"]}','$hacker')
+    "INSERT INTO comments (albumid,userid,albumcomment)
+VALUES ( ? , ? , ? )
+";
 
-    ";
-    mysqli_query($db, $sql);
+    if ($stmt = mysqli_prepare($db, $sql)) {
+
+        mysqli_stmt_bind_param($stmt, "sss",  $albumid, $commentdata["userid"],$hacker);
+
+        if (mysqli_stmt_execute($stmt)) {
+            $result = mysqli_stmt_get_result($stmt);
+            }
+        }
+
+        
     header("Location: album.php?album=" . $albumid);
     exit;
 }
