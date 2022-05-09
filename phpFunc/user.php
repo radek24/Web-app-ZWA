@@ -4,12 +4,12 @@ function login($db, $userdata) {
     "SELECT *
     FROM users
     WHERE email = ?
-      AND password = SHA1(?)
+      AND password = ?
    ";
 
     if ($stmt = mysqli_prepare($db, $sql)) {
-
-        mysqli_stmt_bind_param($stmt, "ss",  $userdata["email"], $userdata["password"]);
+        $temp = sha1($userdata["password"]);
+        mysqli_stmt_bind_param($stmt, "ss",  $userdata["email"], $temp);
 
         if (mysqli_stmt_execute($stmt)) {
             $result = mysqli_stmt_get_result($stmt);
