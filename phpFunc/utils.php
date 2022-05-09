@@ -222,18 +222,26 @@ function deleteComments($db, $cmid, $albumid, $usrid, $admin)
 {
     if ($admin == 0) {
         $sql =
-            "DELETE FROM
-    comments
-    WHERE comments.id = $cmid AND comments.userid = $usrid
-    ";
+        "DELETE FROM
+        comments
+        WHERE comments.id = ? AND comments.userid = ?
+        ";
+                if ($stmt = mysqli_prepare($db, $sql )) {
+        
+                    mysqli_stmt_bind_param($stmt, "si", $cmid,$usrid);
+                    if (mysqli_stmt_execute($stmt)) {
+                        $result_songs = mysqli_stmt_get_result($stmt);
+                    }
+                }
     } else {
         $sql =
             "DELETE FROM
     comments
     WHERE comments.id = $cmid
     ";
-    }
     mysqli_query($db, $sql);
+    }
+    
     header("Location: album.php?album=" . $albumid);
     exit;
 }
