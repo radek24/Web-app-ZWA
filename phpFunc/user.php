@@ -43,14 +43,16 @@ function logoff(){
     exit;
 }
 function create_account($db, $userdata){
+    
     $hacker =  htmlspecialchars($userdata["username"], ENT_QUOTES, 'UTF-8');
+    $hacker2 =  htmlspecialchars($userdata["email"], ENT_QUOTES, 'UTF-8');
     $sql = 
 "INSERT INTO `users`  (`name`,`email`,`password`) VALUES ( ? , ? , ? )
 ";
 
     if ($stmt = mysqli_prepare($db, $sql)) {
         $tmp =sha1($userdata["password"]);
-        mysqli_stmt_bind_param($stmt, "sss", $hacker  , $userdata["email"],$tmp);
+        mysqli_stmt_bind_param($stmt, "sss", $hacker  , $hacker2,$tmp);
 
         if (mysqli_stmt_execute($stmt)) {
             $result = mysqli_stmt_get_result($stmt);
